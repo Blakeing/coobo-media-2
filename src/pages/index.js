@@ -1,10 +1,14 @@
-import React from 'react';
-// import Typical from 'react-typical';
-import { animated, useSpring, config } from 'react-spring';
-import Tilt from '../images/tilt_houston.jpg';
-import Coobo from '../images/coobo-logo-white.png';
-import Typical from 'react-typical';
+import React, { useState } from 'react';
 import { Link } from 'gatsby';
+import Coobo from '../images/coobo-logo-white.png';
+import CooboColor from '../images/coobomedia_logo_color.png';
+import Tilt from '../images/tilt_houston.jpg';
+import SideNav from '../components/side-nav';
+import SocialNav from '../components/social-nav';
+import { animated, useSpring, config } from 'react-spring';
+import Typical from 'react-typical';
+
+import { useMediaQuery } from 'react-responsive';
 
 const steps = [
   '',
@@ -19,7 +23,11 @@ const steps = [
   3000
 ];
 
-const Index = () => {
+const Tuts = () => {
+  const [isNavOpen, setNavOpen] = useState(false);
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(min-device-width: 1224px)'
+  });
   const fade = useSpring({
     from: { opacity: 0 },
     to: { opacity: 1 },
@@ -43,37 +51,81 @@ const Index = () => {
 
   return (
     <>
-      <div
-        className="relative h-screen border-4 lg:border-8 border-white"
-        style={{
-          backgroundImage: `url(${Tilt})`,
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover'
-        }}
+      <header
+        style={{ marginBottom: '1px' }}
+        className="z-40 w-full lg:hidden shadow bg-white"
       >
-        <div className="hidden sm:block absolute top-0 left-0 ">
-          <button className="font-bold text-xs lg:text-2xl tracking-wide text-white py-3 px-5">
-            <img src={Coobo} />
+        <div className="flex flex-wrap items-center justify-between mx-auto p-4 ">
+          <Link className="flex items-center no-underline text-white" to="/">
+            <img className="h-6" src={CooboColor} />
+          </Link>
+          <button
+            className="z-40 focus:outline-none block lg:hidden flex items-center px-1 py-1 rounded text-white"
+            onClick={() => setNavOpen(!isNavOpen)}
+          >
+            <svg
+              className="fill-current text-gray-500 h-6 w-6"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
           </button>
         </div>
+      </header>
+      <div
+        style={{ position: 'sticky', top: '0' }}
+        className="hidden lg:block z-30 float-right"
+      >
+        <button
+          style={{ backgroundColor: '#EC5226' }}
+          className="focus:outline-none border-l-4 border-b-4 lg:border-l-8 lg:border-b-8 border-white px-3 py-2 text-white"
+          onClick={() => setNavOpen(!isNavOpen)}
+        >
+          <svg
+            className="fill-current text-white h-10 w-10"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          </svg>
+        </button>
+      </div>
+      <div
+        style={{
+          height: isDesktopOrLaptop ? '100vh' : 'calc(100vh - 4rem)'
+        }}
+        className="z-0"
+      >
+        <SideNav isOpen={isNavOpen} />
+        <SocialNav />
+        <div
+          style={{
+            backgroundImage: `url(${Tilt})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover'
+          }}
+          className="relative bg-center h-full border-8 lg:border-8 border-white"
+        >
+          <div className="hidden lg:block bg-transparent flex justify-between items-center py-10 px-16 text-white">
+            <Link to="/">
+              <img src={Coobo} />
+            </Link>
+          </div>
 
-        <div className="hidden sm:block absolute border-b-4 border-l-4 lg:border-b-8 lg:border-l-8 border-white bg-white top-0 right-0 ">
-          <button className="font-bold text-xs lg:text-2xl tracking-wide bg-red-500 text-white py-3 px-5">
-            --
-          </button>
-        </div>
-        <div className="h-full flex justify-center items-center">
-          <div className="mx-auto px-4">
+          <div className="mx-auto pl-4 pt-40 lg:pl-64 pr-16 lg:pt-48">
             <animated.h1
               style={fade}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-wide text-white font-bold"
+              className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl tracking-wide text-white font-bold lg:font-extrabold"
             >
               A Creative Agency
             </animated.h1>
 
             <animated.span
               style={focus}
-              className="text-small lg:text-3xl text-white font-light italic"
+              className="text-small lg:text-4xl text-white font-light italic"
             >
               Focused on{' '}
             </animated.span>
@@ -83,63 +135,46 @@ const Index = () => {
                 steps={steps}
                 loop={Infinity}
                 className={
-                  'text-white text-small lg:text-3xl italic font-light'
+                  'text-white text-small lg:text-4xl italic font-light'
                 }
               />
             </animated.span>
           </div>
-        </div>
-        <div className="absolute border-t-4 border-l-4 lg:border-t-8 lg:border-l-8 border-white bg-white bottom-0 right-0 ">
-          <button className="hover:bg-gray-900 font-semibold text-xs lg:text-3xl tracking-wide bg-red-500 text-white py-2 px-4">
-            <Link to="/web">Web</Link>
-          </button>
-          <button className="hover:bg-gray-900 font-semibold text-xs lg:text-3xl tracking-wide bg-green-500 text-white py-2 px-4 ml-1">
-            <Link to="/print">Print</Link>
-          </button>
-          <button className="hover:bg-gray-900 font-semibold text-xs lg:text-3xl tracking-wide bg-purple-500 text-white py-2 px-4 ml-1">
-            <Link to="/brand">Brand</Link>
-          </button>
-          <button className="hover:bg-gray-900 font-semibold text-xs lg:text-3xl tracking-wide bg-blue-500 text-white py-2 px-4 ml-1">
-            <Link to="/marketing">Marketing</Link>
-          </button>
+
+          <div className="z-10 absolute border-l-4 border-t-4  lg:border-l-8 lg:border-t-8  border-white bg-white bottom-0 right-0 ">
+            <button
+              style={{ backgroundColor: 'rgb(181,47,47)' }}
+              className="hover:bg-gray-900 font-semibold text-sm lg:text-3xl tracking-wider bg-red-500 text-white py-2 px-3 lg:px-4"
+            >
+              <Link to="/web">Web</Link>
+            </button>
+            <button
+              style={{ backgroundColor: 'rgb(67,135,75)' }}
+              className="ml-1 lg:ml-2 hover:bg-gray-900 font-semibold text-sm lg:text-3xl tracking-wider bg-green-500 text-white py-2 px-3 lg:px-4 "
+            >
+              <Link to="/print">Print</Link>
+            </button>
+            <button
+              style={{ backgroundColor: 'rgb(93,37,100)' }}
+              className="ml-1 lg:ml-2 hover:bg-gray-900 font-semibold text-sm lg:text-3xl tracking-wider bg-purple-500 text-white py-2 px-3 lg:px-4 "
+            >
+              <Link to="/brand">Brand</Link>
+            </button>
+            <button
+              style={{ backgroundColor: 'rgb(58,175,210)' }}
+              className="ml-1 lg:ml-2 hover:bg-gray-900 font-semibold text-sm lg:text-3xl tracking-wider bg-blue-500 text-white py-2 px-3 lg:px-4 "
+            >
+              <Link to="/marketing">Marketing</Link>
+            </button>
+          </div>
         </div>
       </div>
-      <div className="flex flex-wrap">
-        <div className="md:w-1/2 bg-gray-100 mx-auto p-5 lg:px-20 lg:py-40">
-          <h2 className="text-gray-800 text-2xl lg:text-5xl tracking-wide font-bold">
-            Transforming Ideas
-          </h2>
-          <p className="text-gray-700">
-            Whether you’re launching a new business or want to modernize an
-            established brand, the team at Coobo Media can help bring your ideas
-            to life. By listening and understanding your goals, Coobo Media can
-            help you develop a strategy that blends the appropriate design,
-            technology and user experience into successful outcomes.
-          </p>
-          <button className="uppercase tracking-widest mt-4 bg-red-500 hover:bg-gray-700 text-white text-xs font-bold py-3 px-12 ">
-            Our Team
-          </button>
-          <button className="ml-2 uppercase tracking-widest mt-4 bg-red-500 hover:bg-gray-700 text-white text-xs font-bold py-3 px-12 ">
-            Contact Us
-          </button>
-        </div>
-        <div className="md:w-1/2 bg-gray-400"></div>
-      </div>
-      <div className="flex justify-center items-center bg-gray-700">
-        <div className="container mx-auto p-10">
-          <p className="text-white text-lg text text-center font-light">
-            My Company has worked with Coobo Media over the past three years
-            developing our internal and external marketing materials. They’ve
-            done a wonderful job helping us build and promote the Swagelok brand
-            to the Houston community, whether it’s through marketing materials,
-            website development or event materials. Coobo is truly a partner in
-            our business and always there to support our day to day marketing
-            needs.
-          </p>
-        </div>
+
+      <div style={{ height: '1000px' }} className="">
+        hi
       </div>
     </>
   );
 };
 
-export default Index;
+export default Tuts;
