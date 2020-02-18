@@ -7,6 +7,7 @@ import SideNav from '../components/side-nav';
 import SocialNav from '../components/social-nav';
 import { animated, useSpring, config } from 'react-spring';
 import Typical from 'react-typical';
+import Div100vh from 'react-div-100vh';
 
 import { useMediaQuery } from 'react-responsive';
 
@@ -93,9 +94,9 @@ const Tuts = () => {
           </svg>
         </button>
       </div>
-      <div
+      <Div100vh
         style={{
-          height: isDesktopOrLaptop ? '100vh' : 'calc(100vh - 7.5rem)'
+          height: isDesktopOrLaptop ? '100rvh' : 'calc(100rvh - 4rem)'
         }}
         className="z-0"
       >
@@ -168,7 +169,7 @@ const Tuts = () => {
             </button>
           </div>
         </div>
-      </div>
+      </Div100vh>
 
       <div style={{ height: '1000px' }} className="">
         hi
