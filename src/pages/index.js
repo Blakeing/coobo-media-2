@@ -95,6 +95,7 @@ const Tuts = () => {
       </div>
       <div
         style={{
+          minHeight: '-webkit-fill-available',
           height: isDesktopOrLaptop ? '100vh' : 'calc(100vh - 4rem)'
         }}
         className="z-0"
