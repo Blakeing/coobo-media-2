@@ -2,10 +2,22 @@
 module.exports = {
   theme: {
     maxWidth: {
-      '1/4': '25%',
-      '1/3': '33.33%',
-      '1/2': '50%',
-      '3/4': '75%'
+      'max-w-xs': '20rem',
+      'max-w-sm': '24rem',
+      'max-w-md': '28rem',
+      'max-w-lg': '32rem',
+      'max-w-xl': '36rem',
+      'max-w-2xl': '42rem',
+      'max-w-3xl': '48rem',
+      'max-w-4xl': '56rem',
+      'max-w-5xl': '64rem',
+      'max-w-6xl': '72rem',
+      'max-w-full': '100%',
+      'max-w-screen-sm': ' 640px',
+      'max-w-screen-md': ' 768px',
+      'max-w-screen-lg': '1024px',
+      'max-w-screen-xl': '1280px',
+      'max-w-none	max-width': 'none'
     },
     fontSize: {
       xs: '.75rem',
