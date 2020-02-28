@@ -4,6 +4,7 @@ import Mark from '../images/header_bg_mark.jpg';
 import Harrison from '../images/staff_abt_blake_harrison.jpg';
 import Coobo from '../images/coobo-logo-white.png';
 import SideNav from '../components/side-nav';
+import Footer from '../components/footer';
 
 const About = () => {
   const [isNavOpen, setNavOpen] = useState(false);
@@ -48,19 +49,14 @@ const About = () => {
             About Us
           </h2>
         </div>
-
         <ul className="pr-40 lg:w-full hidden lg:flex lg:items-center lg:justify-end">
-          <li className="">
-            <Link
-              className="py-2 border-l-4 border-white bg-gray-400 px-3 text-2xl font-light text-white "
-              to="/services"
-            >
-              Services
-            </Link>
+          <li className="py-1 border-l-4 border-white bg-dark-steel px-3 text-2xl font-thin text-white ">
+            Services
           </li>
           <li>
             <Link
-              className="hover:text-red-500 bg-gray-900 py-2 px-3 text-2xl font-light text-white"
+              style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
+              className="hover:text-orange py-2 px-3 text-2xl font-thin text-white"
               to="/web"
             >
               Web
@@ -68,7 +64,8 @@ const About = () => {
           </li>
           <li>
             <Link
-              className="hover:text-red-500 bg-gray-900 py-2 px-3 text-2xl font-light text-white "
+              style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
+              className="hover:text-orange py-2 px-3 text-2xl font-thin text-white "
               to="/print"
             >
               Print
@@ -76,7 +73,8 @@ const About = () => {
           </li>
           <li>
             <Link
-              className="hover:text-red-500 bg-gray-900 py-2 px-3 text-2xl font-light text-white "
+              style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
+              className="hover:text-orange py-2 px-3 text-2xl font-thin text-white "
               to="/brand"
             >
               Brand
@@ -84,7 +82,8 @@ const About = () => {
           </li>
           <li>
             <Link
-              className="hover:text-red-500 bg-gray-900 py-2 px-3 text-2xl font-light text-white "
+              style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
+              className="hover:text-orange py-2 px-3 text-2xl font-thin text-white "
               to="/marketing"
             >
               Marketing
@@ -126,69 +125,69 @@ const About = () => {
           </p>
 
           <ul className="pb-5">
-            <li className="border-l-4 p-2 mb-2 border-red-600 bg-gray-300 text-gray-700">
+            <li className="border-l-4 p-2 mb-2 border-orange bg-gray-300 text-gray-700">
               Energy (oil and gas and oilfield equipment/services)
             </li>
-            <li className="border-l-4 p-2 mb-2 border-red-600 bg-gray-300 text-gray-700">
+            <li className="border-l-4 p-2 mb-2 border-orange bg-gray-300 text-gray-700">
               Manufacturing
             </li>
-            <li className="border-l-4 p-2 mb-2 border-red-600 bg-gray-300 text-gray-700">
+            <li className="border-l-4 p-2 mb-2 border-orange bg-gray-300 text-gray-700">
               Logistics
             </li>
-            <li className="border-l-4 p-2 mb-2 border-red-600 bg-gray-300 text-gray-700">
+            <li className="border-l-4 p-2 mb-2 border-orange bg-gray-300 text-gray-700">
               Construction
             </li>
-            <li className="border-l-4 p-2 mb-2 border-red-600 bg-gray-300 text-gray-700">
+            <li className="border-l-4 p-2 mb-2 border-orange bg-gray-300 text-gray-700">
               Architecture
             </li>
-            <li className="border-l-4 p-2 mb-2 border-red-600 bg-gray-300 text-gray-700">
+            <li className="border-l-4 p-2 mb-2 border-orange bg-gray-300 text-gray-700">
               Law
             </li>
-            <li className="border-l-4 p-2 mb-2 border-red-600 bg-gray-300 text-gray-700">
+            <li className="border-l-4 p-2 mb-2 border-orange bg-gray-300 text-gray-700">
               Health Care
             </li>
-            <li className="border-l-4 p-2 mb-2 border-red-600 bg-gray-300 text-gray-700">
+            <li className="border-l-4 p-2 mb-2 border-orange bg-gray-300 text-gray-700">
               Insurance
             </li>
-            <li className="border-l-4 p-2 mb-2 border-red-600 bg-gray-300 text-gray-700">
+            <li className="border-l-4 p-2 mb-2 border-orange bg-gray-300 text-gray-700">
               Private Schools
             </li>
-            <li className="border-l-4 p-2 mb-2 border-red-600 bg-gray-300 text-gray-700">
+            <li className="border-l-4 p-2 mb-2 border-orange bg-gray-300 text-gray-700">
               Universities
             </li>
-            <li className="border-l-4 p-2 mb-2 border-red-600 bg-gray-300 text-gray-700">
+            <li className="border-l-4 p-2 mb-2 border-orange bg-gray-300 text-gray-700">
               Retail
             </li>
-            <li className="border-l-4 p-2 mb-2 border-red-600 bg-gray-300 text-gray-700">
+            <li className="border-l-4 p-2 mb-2 border-orange bg-gray-300 text-gray-700">
               Churches
             </li>
-            <li className="border-l-4 p-2 mb-2 border-red-600 bg-gray-300 text-gray-700">
+            <li className="border-l-4 p-2 mb-2 border-orange bg-gray-300 text-gray-700">
               Food and Beverage
             </li>
-            <li className="border-l-4 p-2 mb-2 border-red-600 bg-gray-300 text-gray-700">
+            <li className="border-l-4 p-2 mb-2 border-orange bg-gray-300 text-gray-700">
               Software
             </li>
-            <li className="border-l-4 p-2 mb-2 border-red-600 bg-gray-300 text-gray-700">
+            <li className="border-l-4 p-2 mb-2 border-orange bg-gray-300 text-gray-700">
               Non-Profits
             </li>
-            <li className="border-l-4 p-2 mb-2 border-red-600 bg-gray-300 text-gray-700">
+            <li className="border-l-4 p-2 mb-2 border-orange bg-gray-300 text-gray-700">
               Home Builders
             </li>
-            <li className="border-l-4 p-2 mb-2 border-red-600 bg-gray-300 text-gray-700">
+            <li className="border-l-4 p-2 mb-2 border-orange bg-gray-300 text-gray-700">
               Interior Design
             </li>
-            <li className="border-l-4 p-2 mb-2 border-red-600 bg-gray-300 text-gray-700">
+            <li className="border-l-4 p-2 mb-2 border-orange bg-gray-300 text-gray-700">
               Professional Athletes
             </li>
-            <li className="border-l-4 p-2 mb-2 border-red-600 bg-gray-300 text-gray-700">
+            <li className="border-l-4 p-2 mb-2 border-orange bg-gray-300 text-gray-700">
               Book Publishing
             </li>
           </ul>
-          <button className="px-10 py-3 tracking-wider uppercase font-semibold text-sm text-white bg-red-600">
+          <button className="px-10 py-3 tracking-wider uppercase font-semibold text-sm text-white bg-orange">
             Contact Us
           </button>
         </div>
-        <div className="w-full bg-gray-800 md:w-1/2 ">
+        <div className="w-full  md:w-1/2 ">
           <div className="flex flex-wrap">
             <div
               style={{
@@ -281,8 +280,7 @@ const About = () => {
           </div>
         </div>
       </div>
-
-      <div className="bg-gray-900 py-6"></div>
+      <Footer />
     </>
   );
 };

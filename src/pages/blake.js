@@ -4,6 +4,7 @@ import Div100vh from 'react-div-100vh';
 import { useMediaQuery } from 'react-responsive';
 import SideNav from '../components/side-nav';
 import { Link } from 'gatsby';
+import Footer from '../components/footer';
 
 const Blake = () => {
   const isDesktopOrLaptop = useMediaQuery({
@@ -82,62 +83,14 @@ const Blake = () => {
           </div>
           <div className=" py-10 flex justify-center items-center">
             <Link to="/about">
-              <button className="px-10 py-3 tracking-wider uppercase font-medium text-sm text-white bg-transparent border-2 border-white">
+              <button className=" focus:outline-none px-10 py-3 tracking-wider uppercase font-medium text-sm text-white bg-transparent border-2 border-white">
                 Back to About Us Page
               </button>
             </Link>
           </div>
         </div>
       </div>
-
-      <div className="relative overflow-hidden bg-gray-900 h-24 border-b-8 border-white">
-        <div
-          style={{ right: '8rem', bottom: '-8px' }}
-          className="z-30 absolute border-4 lg:border-8 border-white bg-white "
-        >
-          <button
-            style={{ backgroundColor: '#EC5226' }}
-            className="bg-red-500 focus:outline-none border border-white flex items-center px-3 py-2 text-white"
-          >
-            <svg
-              aria-hidden="true"
-              data-prefix="fab"
-              data-icon="facebook-f"
-              className="fill-current text-white h-3 w-3 h-6 w-6"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 320 512"
-            >
-              <path
-                fill="currentColor"
-                d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
-              />
-            </svg>
-          </button>
-        </div>
-        <div
-          style={{ right: '2rem', bottom: '-8px' }}
-          className="z-30 absolute border-4 lg:border-8 border-white bg-white "
-        >
-          <button
-            style={{ backgroundColor: '#EC5226' }}
-            className="bg-red-500 focus:outline-none border border-white flex items-center px-3 py-2 text-white"
-          >
-            <svg
-              aria-hidden="true"
-              data-prefix="fab"
-              data-icon="linkedin-in"
-              className="fill-current text-white h-3 w-3 h-6 w-6"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 448 512"
-            >
-              <path
-                fill="currentColor"
-                d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 01107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
+      <Footer />
     </>
   );
 };

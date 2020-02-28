@@ -1,64 +1,19 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
-import Dog from '../images/header_bg_web.jpg';
-
+import BrandHeader from '../images/header_bg_brand.jpg';
+import Edge from '../images/web_energy-edge.jpg';
 import Coobo from '../images/coobo-logo-white.png';
 import SideNav from '../components/side-nav';
 import Footer from '../components/footer';
 
-const images = [
-  {
-    url: 'https://source.unsplash.com/random/1000x671',
-    color: 'bg-teal-500',
-    alt: 'hi',
-    route: '/'
-  },
-  {
-    url: 'https://source.unsplash.com/random/1000x671',
-    color: 'bg-red-500',
-    alt: 'work',
-    route: '/contact'
-  },
-  {
-    url: 'https://source.unsplash.com/random/1000x671',
-    color: 'bg-teal-500',
-    alt: 'hi',
-    route: '/'
-  },
-  {
-    url: 'https://source.unsplash.com/random/1000x671',
-    color: 'bg-teal-500',
-    alt: 'hi',
-    route: '/'
-  },
-  {
-    url: 'https://source.unsplash.com/random/1000x671',
-    color: 'bg-teal-500',
-    alt: 'hi',
-    route: '/'
-  },
-  {
-    url: 'https://source.unsplash.com/random/1000x671',
-    color: 'bg-teal-500',
-    alt: 'hi',
-    route: '/'
-  },
-  {
-    url: 'https://source.unsplash.com/random/1000x671',
-    color: 'bg-teal-500',
-    alt: 'hi',
-    route: '/'
-  }
-];
-
-const Web = () => {
+const Brand = () => {
   const [isNavOpen, setNavOpen] = useState(false);
   return (
     <>
       <div
         className="flex relative border-white border-t-8 bg-cover bg-center h-32 md:h-48 xl:h-64"
         style={{
-          backgroundImage: `url(${Dog})`,
+          backgroundImage: `url(${BrandHeader})`,
           height: '300px',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
@@ -91,7 +46,7 @@ const Web = () => {
         <SideNav isOpen={isNavOpen} />
         <div style={{ bottom: '25%', left: '5%' }} className="absolute">
           <h2 className="pl-5 lg:pl-16 text-white text-3xl md:text-5xl font-bold">
-            Web
+            Brand
           </h2>
         </div>
 
@@ -154,47 +109,40 @@ const Web = () => {
       <div className="flex flex-wrap">
         <div className="md:w-1/2 bg-gray-100 p-5 lg:p-16">
           <h2 className="leading-tight text-gray-900 font-bold text-3xl pb-6">
-            The Perfect Sales Pitch, Every Time
+            A Great Product Deserves a Great Identity
           </h2>
           <p className="text-gray-700 pb-6">
-            Imagine training a sales person to present your company in the most
-            perfect way. They would consistently deliver a succinct, yet
-            strategic message that fully explains the benefits and features of
-            your product/service; PLUS they would be available, on demand, 24
-            hours a day, 365 days a year to answer questions or to close the
-            deal. This… should be your website.
+            Your brand is more than a logo, business card, billboard… It’s a
+            lasting impression even when you’re not around. It won’t sell your
+            product, but it will represent it. Develop a memorable, enduring
+            legacy worthy of your people, your product and your service.
           </p>
-          <p className="text-gray-700 pb-6">
-            Our web designers are skilled in UX, UI with a range of experiences
-            in HTML, CSS, PHP, Javascript, WordPress, AfterEffects, Premiere and
-            the entire Adobe Creative Suite.
-          </p>
+
           <p className="pb-6 text-xl font-bold">
-            <q>Websites should be the perfect sales pitch, every time.</q>
-            <br />
-            -Blake Harrison
+            <q>We know what we are, but not what we may be.</q>
+            <br />- William Shakespeare
           </p>
           <ul className="pb-5">
             <li className="border-l-4 p-2 mb-2 border-orange bg-steel text-gray-900">
-              Responsive Website Design
+              Logo Design
             </li>
             <li className="border-l-4 p-2 mb-2 border-orange bg-steel text-gray-900">
-              WordPress Development
+              Logo Standards
             </li>
             <li className="border-l-4 p-2 mb-2 border-orange bg-steel text-gray-900">
-              Website Hosting
+              Messaging
             </li>
             <li className="border-l-4 p-2 mb-2 border-orange bg-steel text-gray-900">
-              E-commerce
+              Advertising
             </li>
             <li className="border-l-4 p-2 mb-2 border-orange bg-steel text-gray-900">
-              Blogs
+              Marketing Plans/Support/Strategy
             </li>
             <li className="border-l-4 p-2 mb-2 border-orange bg-steel text-gray-900">
-              Web Applications
+              Social Media Branding
             </li>
             <li className="border-l-4 p-2 border-orange bg-steel text-gray-700">
-              Explainer Videos
+              Creative Concept Development
             </li>
           </ul>
           <button className="px-10 py-3 tracking-wider uppercase font-semibold text-sm text-white bg-orange">
@@ -204,51 +152,82 @@ const Web = () => {
         <div style={{ backgroundColor: '#2e2e2e' }} className=" md:w-1/2">
           <div className=" flex flex-col justify-between">
             <div className="flex flex-wrap">
-              {images.map((image, index) => (
-                <div
-                  key={index}
-                  className="relative sm:max-w-1/2 xl:max-w-1/3 w-full h-auto"
-                >
-                  <img
-                    className="block w-full h-auto"
-                    alt={image.alt}
-                    src={image.url}
-                  />
-                  <Link to={image.route}>
-                    <div
-                      style={{
-                        transition: '.5 ease'
-                      }}
-                      className={`${image.color}  absolute hover:opacity-75 inset-0 h-full -w-full opacity-0`}
-                    >
-                      <div
-                        style={{
-                          top: '50%',
-                          left: '50%',
-                          transform: 'translate(-50%, -50%)'
-                        }}
-                        className="absolute text-center text-white"
-                      >
-                        <svg
-                          aria-hidden="true"
-                          data-prefix="fas"
-                          data-icon="plus-circle"
-                          className="fill-current h-10 w-10"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                  </Link>
-                </div>
-              ))}
+              <img
+                className="sm:max-w-1/2 xl:max-w-1/3 w-full h-auto"
+                alt="A dog relaxing"
+                src={Edge}
+              />
+              <img
+                className="sm:max-w-1/2 xl:max-w-1/3 w-full h-auto"
+                alt="A dog relaxing"
+                src="https://source.unsplash.com/random/1000x671"
+              />
+              <img
+                className="sm:max-w-1/2 xl:max-w-1/3 w-full h-auto"
+                alt="A dog relaxing"
+                src="https://source.unsplash.com/random/1000x671"
+              />
+              <img
+                className="sm:max-w-1/2 xl:max-w-1/3 w-full h-auto"
+                alt="A dog relaxing"
+                src="https://source.unsplash.com/random/1000x671"
+              />
+              <img
+                className="sm:max-w-1/2 xl:max-w-1/3 w-full h-auto"
+                alt="A dog relaxing"
+                src="https://source.unsplash.com/random/1000x671"
+              />
+              <img
+                className="sm:max-w-1/2 xl:max-w-1/3 w-full h-auto"
+                alt="A dog relaxing"
+                src="https://source.unsplash.com/random/1000x671"
+              />
+              <img
+                className="sm:max-w-1/2 xl:max-w-1/3 w-full h-auto"
+                alt="A dog relaxing"
+                src="https://source.unsplash.com/random/1000x671"
+              />
+              <img
+                className="sm:max-w-1/2 xl:max-w-1/3 w-full h-auto"
+                alt="A dog relaxing"
+                src="https://source.unsplash.com/random/1000x671"
+              />
+              <img
+                className="sm:max-w-1/2 xl:max-w-1/3 w-full h-auto"
+                alt="A dog relaxing"
+                src="https://source.unsplash.com/random/1000x671"
+              />
+              <img
+                className="sm:max-w-1/2 xl:max-w-1/3 w-full h-auto"
+                alt="A dog relaxing"
+                src="https://source.unsplash.com/random/1000x671"
+              />
+              <img
+                className="sm:max-w-1/2 xl:max-w-1/3 w-full h-auto"
+                alt="A dog relaxing"
+                src="https://source.unsplash.com/random/1000x671"
+              />
+              <img
+                className="sm:max-w-1/2 xl:max-w-1/3 w-full h-auto"
+                alt="A dog relaxing"
+                src="https://source.unsplash.com/random/1000x671"
+              />
+              <img
+                className="sm:max-w-1/2 xl:max-w-1/3 w-full h-auto"
+                alt="A dog relaxing"
+                src="https://source.unsplash.com/random/1000x671"
+              />
+              <img
+                className="sm:max-w-1/2 xl:max-w-1/3 w-full h-auto"
+                alt="A dog relaxing"
+                src="https://source.unsplash.com/random/1000x671"
+              />
+              <img
+                className="sm:max-w-1/2 xl:max-w-1/3 w-full h-auto"
+                alt="A dog relaxing"
+                src="https://source.unsplash.com/random/1000x671"
+              />
             </div>
-
             <div className="mx-auto py-10">
               <button className="px-10 py-3 tracking-wider uppercase font-semibold text-sm text-white bg-orange">
                 View More
@@ -262,4 +241,4 @@ const Web = () => {
   );
 };
 
-export default Web;
+export default Brand;

@@ -8,7 +8,7 @@ module.exports = {
         brand: 'rgb(93,37,100)',
         web: 'rgb(181,47,47)',
         print: 'rgb(67,135,75)',
-        steel: '#E3E3E3',
+        steel: 'rgba(0, 0, 0, 0.08)',
         'dark-steel': 'rgba(167, 167, 167, 0.75)'
       }
     },

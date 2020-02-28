@@ -54,7 +54,7 @@ const Slider = () => {
     >
       <Link to="/">
         <img
-          style={{ top: '5%', left: '5%' }}
+          style={{ top: '2rem', left: '2rem' }}
           className="hidden lg:block absolute top-0 left-0 bg-transparent "
           src={Coobo}
         />
