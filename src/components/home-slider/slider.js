@@ -5,6 +5,8 @@ import Web from './slides/web-slide';
 import Print from './slides/print-slide';
 import Brand from './slides/brand-slide';
 import Marketing from './slides/marketing-slide';
+import { Link } from 'gatsby';
+import Coobo from '../../images/coobo-logo-white.png';
 
 const slides = [
   {
@@ -50,6 +52,13 @@ const Slider = () => {
         willChange: 'opacity'
       }}
     >
+      <Link to="/">
+        <img
+          style={{ top: '5%', left: '5%' }}
+          className="hidden lg:block absolute top-0 left-0 bg-transparent "
+          src={Coobo}
+        />
+      </Link>
       {item.slide}
 
       <button

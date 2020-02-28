@@ -2,8 +2,7 @@ import React from 'react';
 import Tilt from '../../../images/tilt_houston.jpg';
 import { animated, useSpring, config } from 'react-spring';
 import Typical from 'react-typical';
-import { Link } from 'gatsby';
-import Coobo from '../../../images/coobo-logo-white.png';
+
 import { useMediaQuery } from 'react-responsive';
 
 const steps = [
@@ -19,7 +18,7 @@ const steps = [
   3000
 ];
 
-const Slide1 = () => {
+const HomeSlide = () => {
   const fade = useSpring({
     from: { opacity: 0 },
     to: { opacity: 1 },
@@ -50,34 +49,36 @@ const Slide1 = () => {
       style={{
         backgroundImage: `url(${Tilt})`,
         backgroundRepeat: 'no-repeat',
-        bacgrkoundColor: 'rgba(0, 0, 0, 0.9)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '100%',
-        boxShadow: '0 3000px rgba(0, 0, 0, 0.4) inset'
+        boxShadow: '0 3000px rgba(51, 51, 51, 0.3) inset'
       }}
     >
-      <Link to="/">
-        <img
-          style={{ top: '5%', left: '5%' }}
-          className="hidden lg:block absolute top-0 left-0 bg-transparent "
-          src={Coobo}
-        />
-      </Link>
-
       <div className="flex h-full  lg:items-center lg:justify-center">
-        <div className="w-full lg:w-auto inline-block text-left mt-56 lg:mt-0 px-6 lg:px-0">
+        <div className="w-full lg:w-auto inline-block text-left mt-40 lg:mt-0 px-6 lg:px-0">
           <animated.h1
-            style={{ ...fade, fontSize: isDesktopOrLaptop ? '6rem' : '2rem' }}
-            className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl tracking-wide text-white font-bold lg:font-extrabold"
+            style={{
+              ...fade,
+              fontSize: isDesktopOrLaptop ? '6rem' : '2rem'
+            }}
+            className=" sm:text-5xl md:text-6xl lg:text-7xl tracking-wide text-white font-bold lg:font-extrabold"
           >
             A Creative Agency
           </animated.h1>
+          <span>
+            <svg
+              className="-mb-6 fill-current text-orange h-8 w-8"
+              viewBox="0 0 45 44"
+            >
+              <path d="M0 22v22h9V9h36V0H0v22z" />
+            </svg>
+          </span>
           <animated.span
             style={focus}
-            className="text-xl lg:text-4xl text-white font-light italic"
+            className="pl-4 text-xl lg:text-4xl text-white font-thin italic"
           >
-            Focused on{' '}
+            Focused on{''}
           </animated.span>
           {isDesktopOrLaptop ? '' : <br />}
           <animated.span style={type}>
@@ -85,7 +86,7 @@ const Slide1 = () => {
               wrapper="span"
               steps={steps}
               loop={Infinity}
-              className={'text-white text-xl lg:text-4xl italic font-light'}
+              className={'pl-4 text-white text-xl lg:text-4xl italic font-thin'}
             />
           </animated.span>
         </div>
@@ -94,4 +95,4 @@ const Slide1 = () => {
   );
 };
 
-export default Slide1;
+export default HomeSlide;

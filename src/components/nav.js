@@ -1,41 +1,43 @@
 import React from 'react';
 import { animated } from 'react-spring';
+import { Link } from 'gatsby';
+
 // eslint-disable-next-line react/prop-types
 const Nav = ({ style }) => {
   return (
     <animated.div className="fixed inset-0 py-24 px-5 z-20" style={style}>
       <nav>
         <div>
-          <a
+          <Link
             className="block font-bold tracking-wide text-left text-3xl text-white hover:text-gray-400"
-            href="#"
+            to="/"
           >
             Home
-          </a>
-          <a
+          </Link>
+          <Link
             className="block font-bold tracking-wide text-left text-3xl text-white hover:text-gray-400"
-            href="#"
+            to="/about"
           >
             About Us
-          </a>
-          <a
+          </Link>
+          <Link
             className="block font-bold tracking-wide text-left text-3xl text-white hover:text-gray-400"
-            href="#"
+            to="/services"
           >
             Services
-          </a>
-          <a
+          </Link>
+          <Link
             className="block font-bold tracking-wide text-left text-3xl text-white hover:text-gray-400"
-            href="#"
+            to="/work"
           >
             Our Work
-          </a>
-          <a
+          </Link>
+          <Link
             className="block font-bold tracking-wide text-left text-3xl text-white hover:text-gray-400"
-            href="#"
+            to="/contact"
           >
             Contact Us
-          </a>
+          </Link>
         </div>
         <div className="mt-10">
           <h3 className="text-white text-2xl font-bold tracking-wide">

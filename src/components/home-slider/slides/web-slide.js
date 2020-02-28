@@ -1,7 +1,6 @@
 import React from 'react';
 import Dog from '../../../images/bg_web_dog.png';
-import { Link } from 'gatsby';
-import Coobo from '../../../images/coobo-logo-white.png';
+
 import { useMediaQuery } from 'react-responsive';
 
 const WebSlide = () => {
@@ -22,13 +21,8 @@ const WebSlide = () => {
           height: '100%'
         }}
       >
-        <div className="hidden lg:block bg-transparent flex justify-between items-center py-10 px-16 text-white">
-          <Link to="/">
-            <img src={Coobo} />
-          </Link>
-        </div>
         <div
-          style={{ top: '30%', left: '15%' }}
+          style={{ top: '30%', left: '15%', maxWidth: '42rem' }}
           className="py-20 px-5 lg:p-0 lg:absolute lg:max-w-xl"
         >
           <h1 className="text-5xl lg:text-7xl font-bold text-white">Web</h1>

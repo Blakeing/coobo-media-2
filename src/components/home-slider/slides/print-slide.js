@@ -1,7 +1,5 @@
 import React from 'react';
 import Print from '../../../images/bg_print_tree.png';
-import { Link } from 'gatsby';
-import Coobo from '../../../images/coobo-logo-white.png';
 
 const PrintSlide = () => {
   return (
@@ -16,13 +14,8 @@ const PrintSlide = () => {
           height: '100%'
         }}
       >
-        <div className="hidden lg:block bg-transparent flex justify-between items-center py-10 px-16 text-white">
-          <Link to="/">
-            <img src={Coobo} />
-          </Link>
-        </div>
         <div
-          style={{ top: '20%', right: '5%' }}
+          style={{ bottom: '40%', right: '5%', maxWidth: '42rem' }}
           className="py-20 px-5 lg:absolute lg:max-w-xl"
         >
           <h1 className="text-5xl lg:text-7xl font-bold text-white">Print.</h1>

@@ -1,23 +1,36 @@
 // See https://tailwindcss.com/docs/configuration for details
 module.exports = {
   theme: {
+    extend: {
+      colors: {
+        orange: '#EC5226',
+        marketing: 'rgb(58,175,210)',
+        brand: 'rgb(93,37,100)',
+        web: 'rgb(181,47,47)',
+        print: 'rgb(67,135,75)',
+        steel: '#E3E3E3',
+        'dark-steel': 'rgba(167, 167, 167, 0.75)'
+      }
+    },
     maxWidth: {
-      'max-w-xs': '20rem',
-      'max-w-sm': '24rem',
-      'max-w-md': '28rem',
-      'max-w-lg': '32rem',
-      'max-w-xl': '36rem',
-      'max-w-2xl': '42rem',
-      'max-w-3xl': '48rem',
-      'max-w-4xl': '56rem',
-      'max-w-5xl': '64rem',
-      'max-w-6xl': '72rem',
-      'max-w-full': '100%',
-      'max-w-screen-sm': ' 640px',
-      'max-w-screen-md': ' 768px',
-      'max-w-screen-lg': '1024px',
-      'max-w-screen-xl': '1280px',
-      'max-w-none	max-width': 'none'
+      xs: '20rem',
+      sm: '24rem',
+      md: '28rem',
+      lg: '32rem',
+      xl: '36rem',
+      '2xl': '42rem',
+      '3xl': '48rem',
+      '4xl': '56rem',
+      '5xl': '64rem',
+      '6xl': '72rem',
+      full: '100%',
+      'screen-sm': ' 640px',
+      'screen-md': ' 768px',
+      'screen-lg': '1024px',
+      'screen-xl': '1280px',
+      'none	max-width': 'none',
+      '1/2': '50%',
+      '1/3': '33.33%'
     },
     fontSize: {
       xs: '.75rem',

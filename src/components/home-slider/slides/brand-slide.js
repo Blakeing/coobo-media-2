@@ -1,7 +1,5 @@
 import React from 'react';
 import Butterfly from '../../../images/bg_brand_evolve-1.png';
-import { Link } from 'gatsby';
-import Coobo from '../../../images/coobo-logo-white.png';
 
 const BrandSlide = () => {
   return (
@@ -16,14 +14,9 @@ const BrandSlide = () => {
           height: '100%'
         }}
       >
-        <div className="hidden lg:block bg-transparent flex justify-between items-center py-10 px-16 text-white">
-          <Link to="/">
-            <img src={Coobo} />
-          </Link>
-        </div>
         <div
-          style={{ top: '8rem', left: '10rem' }}
-          className="py-20 px-5 lg:absolute lg:max-w-xl"
+          style={{ top: '10%', left: '10%', maxWidth: '56rem' }}
+          className="py-20 px-5 lg:absolute lg:max-w-md"
         >
           <h1 className=" text-5xl lg:text-7xl font-bold text-white">Brand.</h1>
           <span>

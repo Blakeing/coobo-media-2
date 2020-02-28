@@ -15,7 +15,7 @@ const Marketing = () => {
             Marketing
           </h2>
         </div>
-        <div className=" w-1/2 hidden lg:flex lg:items-center lg:justify-center">
+        <div className="w-1/2 hidden lg:flex lg:items-center lg:justify-center">
           <nav className="">
             <ul className="flex">
               <li className="">
