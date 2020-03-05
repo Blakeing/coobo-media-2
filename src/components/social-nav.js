@@ -5,17 +5,17 @@ const SocialNav = () => {
     <>
       <div
         style={{ left: '-10px', bottom: '50px' }}
-        className="z-30 hidden lg:block absolute border-4 lg:border-8 border-white bg-white "
+        className="absolute z-30 hidden bg-white border-4 border-white lg:block lg:border-8 "
       >
         <button
           style={{ backgroundColor: '#EC5226' }}
-          className="bg-red-500 focus:outline-none border border-white flex items-center px-3 py-2 text-white"
+          className="flex items-center px-3 py-2 text-white bg-red-500 border border-white focus:outline-none"
         >
           <svg
             aria-hidden="true"
             data-prefix="fas"
             data-icon="envelope"
-            className="fill-current text-white h-6 w-6"
+            className="w-6 h-6 text-white fill-current"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
           >
@@ -28,17 +28,17 @@ const SocialNav = () => {
       </div>
       <div
         style={{ left: '-10px', bottom: '125px' }}
-        className="z-30 hidden lg:block absolute border-4 lg:border-8 border-white bg-white "
+        className="absolute z-30 hidden bg-white border-4 border-white lg:block lg:border-8 "
       >
         <button
           style={{ backgroundColor: '#EC5226' }}
-          className="bg-red-500 focus:outline-none border border-white flex items-center px-3 py-2 text-white"
+          className="flex items-center px-3 py-2 text-white bg-red-500 border border-white focus:outline-none"
         >
           <svg
             aria-hidden="true"
             data-prefix="fab"
             data-icon="linkedin-in"
-            className="fill-current text-white h-3 w-3 h-6 w-6"
+            className="w-3 w-6 h-3 h-6 text-white fill-current"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512"
           >
@@ -51,17 +51,17 @@ const SocialNav = () => {
       </div>
       <div
         style={{ left: '-10px', bottom: '200px' }}
-        className="z-30 hidden lg:block absolute border-4 lg:border-8 border-white bg-white "
+        className="absolute z-30 hidden bg-white border-4 border-white lg:block lg:border-8 "
       >
         <button
           style={{ backgroundColor: '#EC5226' }}
-          className="bg-red-500 focus:outline-none border border-white flex items-center px-3 py-2 text-white"
+          className="flex items-center px-3 py-2 text-white bg-red-500 border border-white focus:outline-none"
         >
           <svg
             aria-hidden="true"
             data-prefix="fab"
             data-icon="facebook-f"
-            className="fill-current text-white h-3 w-3 h-6 w-6"
+            className="w-3 w-6 h-3 h-6 text-white fill-current"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 320 512"
           >

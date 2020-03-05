@@ -14,15 +14,15 @@ const Blake = () => {
   const [isNavOpen, setNavOpen] = useState(false);
   return (
     <>
-      <div className="flex flex-wrap z-0 bg-white border-t-8 border-white">
-        <div className="hidden lg:block fixed top-0 right-0 z-30 ">
+      <div className="z-0 flex flex-wrap bg-white border-t-8 border-white">
+        <div className="fixed top-0 right-0 z-30 hidden lg:block ">
           <button
             style={{ backgroundColor: '#EC5226' }}
-            className="focus:outline-none border-l-4 border-b-4 lg:border-l-8 lg:border-b-8 border-white px-3 py-2 text-white"
+            className="px-3 py-2 text-white border-b-4 border-l-4 border-white focus:outline-none lg:border-l-8 lg:border-b-8"
             onClick={() => setNavOpen(!isNavOpen)}
           >
             <svg
-              className="fill-current text-white h-10 w-10"
+              className="w-10 h-10 text-white fill-current"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -46,16 +46,16 @@ const Blake = () => {
           style={{ backgroundColor: '#41b2bf' }}
           className="flex flex-col items-center justify-center md:w-3/4"
         >
-          <div className="w-full px-5 py-6 lg:p-10  ">
-            <h1 className=" mb-2 leading-none text-white text-4xl lg:text-6xl font-bold">
+          <div className="w-full px-5 py-6 lg:p-10 ">
+            <h1 className="mb-2 text-4xl font-bold leading-none text-white lg:text-6xl">
               Blake Harrison
             </h1>
-            <h2 className="text-white text-lg tracking-wide font-bold">
+            <h2 className="text-lg font-bold tracking-wide text-white">
               Creative Director / Managing Partner
             </h2>
           </div>
           <div style={{ backgroundColor: '#3795A0' }} className="p-5 lg:p-10">
-            <p className="mb-6 text-white font-light">
+            <p className="mb-6 font-light text-white">
               Coobo Media is not only named after Blake‘s twin boys, Cooper and
               Bo, but it is also the realization of his dream to create a
               business where he gets to interact with all types of people from
@@ -64,7 +64,7 @@ const Blake = () => {
               creating distinctive designs and utilizing technology to
               differentiate each business from their competition.
             </p>
-            <p className="mb-6 text-white font-light">
+            <p className="mb-6 font-light text-white">
               After three years in Real Estate Banking right out of college,
               Blake changed gears and spent ten years in the entertainment
               industry in Los Angeles, working on the writing staff of
@@ -76,14 +76,14 @@ const Blake = () => {
               department for a manufacturer/distributor, who remains a client
               today.
             </p>
-            <p className="text-white font-light">
+            <p className="font-light text-white">
               A graduate of Texas AM University, Blake is married to TK and has
               three kids.
             </p>
           </div>
-          <div className=" py-10 flex justify-center items-center">
+          <div className="flex items-center justify-center py-10 ">
             <Link to="/about">
-              <button className=" focus:outline-none px-10 py-3 tracking-wider uppercase font-medium text-sm text-white bg-transparent border-2 border-white">
+              <button className="px-10 py-3 text-sm font-medium tracking-wider text-white uppercase bg-transparent border-2 border-white focus:outline-none">
                 Back to About Us Page
               </button>
             </Link>

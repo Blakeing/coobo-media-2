@@ -11,7 +11,7 @@ const About = () => {
   return (
     <>
       <div
-        className="relative border-white border-t-8 flex bg-cover bg-center h-32 md:h-48 xl:h-64"
+        className="relative flex h-32 bg-center bg-cover border-t-8 border-white md:h-48 xl:h-64"
         style={{
           backgroundImage: `url(${Mark})`,
           height: '300px',
@@ -23,18 +23,18 @@ const About = () => {
         <Link to="/">
           <img
             style={{ top: '2rem', left: '2rem' }}
-            className="hidden lg:block absolute top-0 left-0 bg-transparent "
+            className="absolute top-0 left-0 hidden bg-transparent lg:block "
             src={Coobo}
           />
         </Link>
-        <div className="hidden lg:block fixed top-0 right-0 z-30 ">
+        <div className="fixed top-0 right-0 z-30 hidden lg:block ">
           <button
             style={{ backgroundColor: '#EC5226' }}
             onClick={() => setNavOpen(!isNavOpen)}
-            className="focus:outline-none border-l-4 border-b-4 lg:border-l-8 lg:border-b-8 border-white px-3 py-2 text-white"
+            className="px-3 py-2 text-white border-b-4 border-l-4 border-white focus:outline-none lg:border-l-8 lg:border-b-8"
           >
             <svg
-              className="fill-current text-white h-10 w-10"
+              className="w-10 h-10 text-white fill-current"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -45,18 +45,18 @@ const About = () => {
         </div>
         <SideNav isOpen={isNavOpen} />
         <div style={{ bottom: '25%', left: '5%' }} className="absolute">
-          <h2 className="pl-5 lg:pl-16 text-white text-3xl md:text-5xl font-bold">
+          <h2 className="pl-5 text-3xl font-bold text-white lg:pl-16 md:text-5xl">
             About Us
           </h2>
         </div>
-        <ul className="pr-40 lg:w-full hidden lg:flex lg:items-center lg:justify-end">
-          <li className="py-1 border-l-4 border-white bg-dark-steel px-3 text-2xl font-thin text-white ">
+        <ul className="hidden pr-40 lg:w-full lg:flex lg:items-center lg:justify-end">
+          <li className="px-3 py-1 text-2xl font-thin text-white border-l-4 border-white bg-dark-steel ">
             Services
           </li>
           <li>
             <Link
               style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
-              className="hover:text-orange py-2 px-3 text-2xl font-thin text-white"
+              className="px-3 py-2 text-2xl font-thin text-white hover:text-orange"
               to="/web"
             >
               Web
@@ -65,7 +65,7 @@ const About = () => {
           <li>
             <Link
               style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
-              className="hover:text-orange py-2 px-3 text-2xl font-thin text-white "
+              className="px-3 py-2 text-2xl font-thin text-white hover:text-orange "
               to="/print"
             >
               Print
@@ -74,7 +74,7 @@ const About = () => {
           <li>
             <Link
               style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
-              className="hover:text-orange py-2 px-3 text-2xl font-thin text-white "
+              className="px-3 py-2 text-2xl font-thin text-white hover:text-orange "
               to="/brand"
             >
               Brand
@@ -83,7 +83,7 @@ const About = () => {
           <li>
             <Link
               style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
-              className="hover:text-orange py-2 px-3 text-2xl font-thin text-white "
+              className="px-3 py-2 text-2xl font-thin text-white hover:text-orange "
               to="/marketing"
             >
               Marketing
@@ -91,30 +91,30 @@ const About = () => {
           </li>
         </ul>
       </div>
-      <nav className="lg:hidden flex bg-gray-900 ">
-        <Link className=" pl-5 py-3 text-sm text-white pr-6 " to="/">
+      <nav className="flex bg-gray-900 lg:hidden ">
+        <Link className="py-3 pl-5 pr-6 text-sm text-white " to="/">
           Web
         </Link>
-        <Link className="py-3 text-sm text-white pr-6" to="/">
+        <Link className="py-3 pr-6 text-sm text-white" to="/">
           Print
         </Link>
-        <Link className="py-3 text-sm text-white pr-6" to="/">
+        <Link className="py-3 pr-6 text-sm text-white" to="/">
           Brand
         </Link>
-        <Link className=" text-sm text-white py-3" to="/">
+        <Link className="py-3 text-sm text-white " to="/">
           Marketing
         </Link>
       </nav>
       <div className="flex flex-wrap">
-        <div className="md:w-1/2 bg-gray-100 p-5 lg:p-16">
-          <p className="text-gray-700 pb-6">
+        <div className="p-5 bg-gray-100 md:w-1/2 lg:p-16">
+          <p className="pb-6 text-gray-700">
             Coobo Media takes pride in the partnerships we form with all of our
             clients. Our mantra is “Be Thoughtful in Everything You Do.” We
             believe that if you put an extra measure of considered thought into
             every design, plan and interaction, the results will exceed
             expectations.
           </p>
-          <p className="text-gray-700 pb-6">
+          <p className="pb-6 text-gray-700">
             Our branding, marketing and web design experience spans a wide
             variety of industries. We work with clients in our building, our
             neighborhoods, across Houston, around Texas, the U.S. and even the
@@ -125,69 +125,69 @@ const About = () => {
           </p>
 
           <ul className="pb-5">
-            <li className="border-l-4 p-2 mb-2 border-orange bg-gray-300 text-gray-700">
+            <li className="p-2 mb-2 text-gray-700 bg-gray-300 border-l-4 border-orange">
               Energy (oil and gas and oilfield equipment/services)
             </li>
-            <li className="border-l-4 p-2 mb-2 border-orange bg-gray-300 text-gray-700">
+            <li className="p-2 mb-2 text-gray-700 bg-gray-300 border-l-4 border-orange">
               Manufacturing
             </li>
-            <li className="border-l-4 p-2 mb-2 border-orange bg-gray-300 text-gray-700">
+            <li className="p-2 mb-2 text-gray-700 bg-gray-300 border-l-4 border-orange">
               Logistics
             </li>
-            <li className="border-l-4 p-2 mb-2 border-orange bg-gray-300 text-gray-700">
+            <li className="p-2 mb-2 text-gray-700 bg-gray-300 border-l-4 border-orange">
               Construction
             </li>
-            <li className="border-l-4 p-2 mb-2 border-orange bg-gray-300 text-gray-700">
+            <li className="p-2 mb-2 text-gray-700 bg-gray-300 border-l-4 border-orange">
               Architecture
             </li>
-            <li className="border-l-4 p-2 mb-2 border-orange bg-gray-300 text-gray-700">
+            <li className="p-2 mb-2 text-gray-700 bg-gray-300 border-l-4 border-orange">
               Law
             </li>
-            <li className="border-l-4 p-2 mb-2 border-orange bg-gray-300 text-gray-700">
+            <li className="p-2 mb-2 text-gray-700 bg-gray-300 border-l-4 border-orange">
               Health Care
             </li>
-            <li className="border-l-4 p-2 mb-2 border-orange bg-gray-300 text-gray-700">
+            <li className="p-2 mb-2 text-gray-700 bg-gray-300 border-l-4 border-orange">
               Insurance
             </li>
-            <li className="border-l-4 p-2 mb-2 border-orange bg-gray-300 text-gray-700">
+            <li className="p-2 mb-2 text-gray-700 bg-gray-300 border-l-4 border-orange">
               Private Schools
             </li>
-            <li className="border-l-4 p-2 mb-2 border-orange bg-gray-300 text-gray-700">
+            <li className="p-2 mb-2 text-gray-700 bg-gray-300 border-l-4 border-orange">
               Universities
             </li>
-            <li className="border-l-4 p-2 mb-2 border-orange bg-gray-300 text-gray-700">
+            <li className="p-2 mb-2 text-gray-700 bg-gray-300 border-l-4 border-orange">
               Retail
             </li>
-            <li className="border-l-4 p-2 mb-2 border-orange bg-gray-300 text-gray-700">
+            <li className="p-2 mb-2 text-gray-700 bg-gray-300 border-l-4 border-orange">
               Churches
             </li>
-            <li className="border-l-4 p-2 mb-2 border-orange bg-gray-300 text-gray-700">
+            <li className="p-2 mb-2 text-gray-700 bg-gray-300 border-l-4 border-orange">
               Food and Beverage
             </li>
-            <li className="border-l-4 p-2 mb-2 border-orange bg-gray-300 text-gray-700">
+            <li className="p-2 mb-2 text-gray-700 bg-gray-300 border-l-4 border-orange">
               Software
             </li>
-            <li className="border-l-4 p-2 mb-2 border-orange bg-gray-300 text-gray-700">
+            <li className="p-2 mb-2 text-gray-700 bg-gray-300 border-l-4 border-orange">
               Non-Profits
             </li>
-            <li className="border-l-4 p-2 mb-2 border-orange bg-gray-300 text-gray-700">
+            <li className="p-2 mb-2 text-gray-700 bg-gray-300 border-l-4 border-orange">
               Home Builders
             </li>
-            <li className="border-l-4 p-2 mb-2 border-orange bg-gray-300 text-gray-700">
+            <li className="p-2 mb-2 text-gray-700 bg-gray-300 border-l-4 border-orange">
               Interior Design
             </li>
-            <li className="border-l-4 p-2 mb-2 border-orange bg-gray-300 text-gray-700">
+            <li className="p-2 mb-2 text-gray-700 bg-gray-300 border-l-4 border-orange">
               Professional Athletes
             </li>
-            <li className="border-l-4 p-2 mb-2 border-orange bg-gray-300 text-gray-700">
+            <li className="p-2 mb-2 text-gray-700 bg-gray-300 border-l-4 border-orange">
               Book Publishing
             </li>
           </ul>
-          <button className="px-10 py-3 tracking-wider uppercase font-semibold text-sm text-white bg-orange">
+          <button className="px-10 py-3 text-sm font-semibold tracking-wider text-white uppercase bg-orange">
             Contact Us
           </button>
         </div>
-        <div className="w-full  md:w-1/2 ">
+        <div className="w-full md:w-1/2 ">
           <div className="flex flex-wrap">
             <div
               style={{
@@ -198,12 +198,12 @@ const About = () => {
                 height: '400px',
                 boxShadow: '0 3000px rgba(51, 51, 51, 0.3) inset'
               }}
-              className="relative hover:opacity-75 w-full md:w-1/2 "
+              className="relative w-full hover:opacity-75 md:w-1/2 "
               alt="A dog relaxing"
             >
               <span
                 style={{ top: '10%', left: '10%' }}
-                className="absolute text-white tracking-wide font-semibold text-lg p-2"
+                className="absolute p-2 text-lg font-semibold tracking-wide text-white"
               >
                 Blake Harrison
               </span>
@@ -212,14 +212,14 @@ const About = () => {
                   style={{ bottom: '10%', left: '10%' }}
                   className="absolute"
                 >
-                  <div className="inline-block uppercase text-sm tracking-wider text-white font-semibold p-2 ">
+                  <div className="inline-block p-2 text-sm font-semibold tracking-wider text-white uppercase ">
                     View Bio
                     <span>
                       <svg
                         aria-hidden="true"
                         data-prefix="far"
                         data-icon="arrow-alt-circle-right"
-                        className="inline-block pl-3 pb-1 h-10 w-10"
+                        className="inline-block w-10 h-10 pb-1 pl-3"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 512 512"
                       >
@@ -242,12 +242,12 @@ const About = () => {
                 height: '400px',
                 boxShadow: '0 3000px rgba(51, 51, 51, 0.3) inset'
               }}
-              className="relative hover:opacity-75 w-full md:w-1/2 "
+              className="relative w-full hover:opacity-75 md:w-1/2 "
               alt="A dog relaxing"
             >
               <span
                 style={{ top: '10%', left: '10%' }}
-                className="absolute text-white tracking-wide font-semibold text-lg p-2"
+                className="absolute p-2 text-lg font-semibold tracking-wide text-white"
               >
                 Blake Harrison
               </span>
@@ -256,14 +256,14 @@ const About = () => {
                   style={{ bottom: '10%', left: '10%' }}
                   className="absolute"
                 >
-                  <div className="inline-block uppercase text-sm tracking-wider text-white font-semibold p-2 ">
+                  <div className="inline-block p-2 text-sm font-semibold tracking-wider text-white uppercase ">
                     View Bio
                     <span>
                       <svg
                         aria-hidden="true"
                         data-prefix="far"
                         data-icon="arrow-alt-circle-right"
-                        className="inline-block pl-3 pb-1 h-10 w-10"
+                        className="inline-block w-10 h-10 pb-1 pl-3"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 512 512"
                       >

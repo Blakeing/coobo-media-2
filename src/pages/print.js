@@ -11,7 +11,7 @@ const Print = () => {
   return (
     <>
       <div
-        className="flex relative border-white border-t-8 bg-cover bg-center h-32 md:h-48 xl:h-64"
+        className="relative flex h-32 bg-center bg-cover border-t-8 border-white md:h-48 xl:h-64"
         style={{
           backgroundImage: `url(${Printer})`,
           height: '300px',
@@ -23,18 +23,18 @@ const Print = () => {
         <Link to="/">
           <img
             style={{ top: '2rem', left: '2rem' }}
-            className="hidden lg:block absolute top-0 left-0 bg-transparent "
+            className="absolute top-0 left-0 hidden bg-transparent lg:block "
             src={Coobo}
           />
         </Link>
-        <div className="hidden lg:block fixed top-0 right-0 z-30 ">
+        <div className="fixed top-0 right-0 z-30 hidden lg:block ">
           <button
             style={{ backgroundColor: '#EC5226' }}
             onClick={() => setNavOpen(!isNavOpen)}
-            className="focus:outline-none border-l-4 border-b-4 lg:border-l-8 lg:border-b-8 border-white px-3 py-2 text-white"
+            className="px-3 py-2 text-white border-b-4 border-l-4 border-white focus:outline-none lg:border-l-8 lg:border-b-8"
           >
             <svg
-              className="fill-current text-white h-10 w-10"
+              className="w-10 h-10 text-white fill-current"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -45,19 +45,19 @@ const Print = () => {
         </div>
         <SideNav isOpen={isNavOpen} />
         <div style={{ bottom: '25%', left: '5%' }} className="absolute">
-          <h2 className="pl-5 lg:pl-16 text-white text-3xl md:text-5xl font-bold">
+          <h2 className="pl-5 text-3xl font-bold text-white lg:pl-16 md:text-5xl">
             Print
           </h2>
         </div>
 
-        <ul className="pr-40 lg:w-full hidden lg:flex lg:items-center lg:justify-end">
-          <li className="py-1 border-l-4 border-white bg-dark-steel px-3 text-2xl font-thin text-white ">
+        <ul className="hidden pr-40 lg:w-full lg:flex lg:items-center lg:justify-end">
+          <li className="px-3 py-1 text-2xl font-thin text-white border-l-4 border-white bg-dark-steel ">
             Services
           </li>
           <li>
             <Link
               style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
-              className="hover:text-orange py-2 px-3 text-2xl font-thin text-white"
+              className="px-3 py-2 text-2xl font-thin text-white hover:text-orange"
               to="/web"
             >
               Web
@@ -66,7 +66,7 @@ const Print = () => {
           <li>
             <Link
               style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
-              className="hover:text-orange py-2 px-3 text-2xl font-thin text-white "
+              className="px-3 py-2 text-2xl font-thin text-white hover:text-orange "
               to="/print"
             >
               Print
@@ -75,7 +75,7 @@ const Print = () => {
           <li>
             <Link
               style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
-              className="hover:text-orange py-2 px-3 text-2xl font-thin text-white "
+              className="px-3 py-2 text-2xl font-thin text-white hover:text-orange "
               to="/brand"
             >
               Brand
@@ -84,7 +84,7 @@ const Print = () => {
           <li>
             <Link
               style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
-              className="hover:text-orange py-2 px-3 text-2xl font-thin text-white "
+              className="px-3 py-2 text-2xl font-thin text-white hover:text-orange "
               to="/marketing"
             >
               Marketing
@@ -92,26 +92,26 @@ const Print = () => {
           </li>
         </ul>
       </div>
-      <nav className="lg:hidden flex bg-gray-900 ">
-        <Link className=" pl-5 py-3 text-sm text-white pr-6 " to="/">
+      <nav className="flex bg-gray-900 lg:hidden ">
+        <Link className="py-3 pl-5 pr-6 text-sm text-white " to="/">
           Web
         </Link>
-        <Link className="py-3 text-sm text-white pr-6" to="/">
+        <Link className="py-3 pr-6 text-sm text-white" to="/">
           Print
         </Link>
-        <Link className="py-3 text-sm text-white pr-6" to="/">
+        <Link className="py-3 pr-6 text-sm text-white" to="/">
           Brand
         </Link>
-        <Link className=" text-sm text-white py-3" to="/">
+        <Link className="py-3 text-sm text-white " to="/">
           Marketing
         </Link>
       </nav>
       <div className="flex flex-wrap">
-        <div className="md:w-1/2 bg-gray-100 p-5 lg:p-16">
-          <h2 className="leading-tight text-gray-900 font-bold text-3xl pb-6">
+        <div className="p-5 bg-gray-100 md:w-1/2 lg:p-16">
+          <h2 className="pb-6 text-3xl font-bold leading-tight text-gray-900">
             Design Sets Your Brand Apart
           </h2>
-          <p className="text-gray-700 pb-6">
+          <p className="pb-6 text-gray-700">
             Be proud of your brochure. Get noticed on the freeway. Give your
             competition business card envy. Place ads that stop your audience in
             their tracks.
@@ -122,122 +122,122 @@ const Print = () => {
             <br />- George Dyson
           </p>
           <ul className="pb-5">
-            <li className="border-l-4 p-2 mb-2 border-orange bg-steel text-gray-700">
+            <li className="p-2 mb-2 text-gray-700 border-l-4 border-orange bg-steel">
               Brochures
             </li>
-            <li className="border-l-4 p-2 mb-2 border-orange bg-steel text-gray-700">
+            <li className="p-2 mb-2 text-gray-700 border-l-4 border-orange bg-steel">
               Business cards
             </li>
-            <li className="border-l-4 p-2 mb-2 border-orange bg-steel text-gray-700">
+            <li className="p-2 mb-2 text-gray-700 border-l-4 border-orange bg-steel">
               Billboards
             </li>
-            <li className="border-l-4 p-2 mb-2 border-orange bg-steel text-gray-700">
+            <li className="p-2 mb-2 text-gray-700 border-l-4 border-orange bg-steel">
               Catalogs
             </li>
-            <li className="border-l-4 p-2 mb-2 border-orange bg-steel text-gray-700">
+            <li className="p-2 mb-2 text-gray-700 border-l-4 border-orange bg-steel">
               Annual Reports
             </li>
-            <li className="border-l-4 p-2 mb-2 border-orange bg-steel text-gray-700">
+            <li className="p-2 mb-2 text-gray-700 border-l-4 border-orange bg-steel">
               Trade show booths and banners
             </li>
-            <li className="border-l-4 p-2 mb-2 border-orange bg-steel text-gray-700">
+            <li className="p-2 mb-2 text-gray-700 border-l-4 border-orange bg-steel">
               Ad design
             </li>
-            <li className="border-l-4 p-2 mb-2 border-orange bg-steel text-gray-700">
+            <li className="p-2 mb-2 text-gray-700 border-l-4 border-orange bg-steel">
               Restaurant/retail collateral
             </li>
-            <li className="border-l-4 p-2 mb-2 border-orange bg-steel text-gray-700">
+            <li className="p-2 mb-2 text-gray-700 border-l-4 border-orange bg-steel">
               Vechicle wraps
             </li>
-            <li className="border-l-4 p-2 mb-2 border-orange bg-steel text-gray-700">
+            <li className="p-2 mb-2 text-gray-700 border-l-4 border-orange bg-steel">
               Signs
             </li>
           </ul>
-          <button className="px-10 py-3 tracking-wider uppercase font-semibold text-sm text-white bg-orange">
+          <button className="px-10 py-3 text-sm font-semibold tracking-wider text-white uppercase bg-orange">
             Contact Us
           </button>
         </div>
         <div className="bg-gray-800 md:w-1/2">
-          <div className=" flex flex-col justify-between">
+          <div className="flex flex-col justify-between ">
             <div className="flex flex-wrap">
               <img
-                className="sm:max-w-1/2 xl:max-w-1/3 w-full h-auto"
+                className="w-full h-auto sm:max-w-1/2 xl:max-w-1/3"
                 alt="A dog relaxing"
                 src={Edge}
               />
               <img
-                className="sm:max-w-1/2 xl:max-w-1/3 w-full h-auto"
+                className="w-full h-auto sm:max-w-1/2 xl:max-w-1/3"
                 alt="A dog relaxing"
                 src="https://source.unsplash.com/random/1000x671"
               />
               <img
-                className="sm:max-w-1/2 xl:max-w-1/3 w-full h-auto"
+                className="w-full h-auto sm:max-w-1/2 xl:max-w-1/3"
                 alt="A dog relaxing"
                 src="https://source.unsplash.com/random/1000x671"
               />
               <img
-                className="sm:max-w-1/2 xl:max-w-1/3 w-full h-auto"
+                className="w-full h-auto sm:max-w-1/2 xl:max-w-1/3"
                 alt="A dog relaxing"
                 src="https://source.unsplash.com/random/1000x671"
               />
               <img
-                className="sm:max-w-1/2 xl:max-w-1/3 w-full h-auto"
+                className="w-full h-auto sm:max-w-1/2 xl:max-w-1/3"
                 alt="A dog relaxing"
                 src="https://source.unsplash.com/random/1000x671"
               />
               <img
-                className="sm:max-w-1/2 xl:max-w-1/3 w-full h-auto"
+                className="w-full h-auto sm:max-w-1/2 xl:max-w-1/3"
                 alt="A dog relaxing"
                 src="https://source.unsplash.com/random/1000x671"
               />
               <img
-                className="sm:max-w-1/2 xl:max-w-1/3 w-full h-auto"
+                className="w-full h-auto sm:max-w-1/2 xl:max-w-1/3"
                 alt="A dog relaxing"
                 src="https://source.unsplash.com/random/1000x671"
               />
               <img
-                className="sm:max-w-1/2 xl:max-w-1/3 w-full h-auto"
+                className="w-full h-auto sm:max-w-1/2 xl:max-w-1/3"
                 alt="A dog relaxing"
                 src="https://source.unsplash.com/random/1000x671"
               />
               <img
-                className="sm:max-w-1/2 xl:max-w-1/3 w-full h-auto"
+                className="w-full h-auto sm:max-w-1/2 xl:max-w-1/3"
                 alt="A dog relaxing"
                 src="https://source.unsplash.com/random/1000x671"
               />
               <img
-                className="sm:max-w-1/2 xl:max-w-1/3 w-full h-auto"
+                className="w-full h-auto sm:max-w-1/2 xl:max-w-1/3"
                 alt="A dog relaxing"
                 src="https://source.unsplash.com/random/1000x671"
               />
               <img
-                className="sm:max-w-1/2 xl:max-w-1/3 w-full h-auto"
+                className="w-full h-auto sm:max-w-1/2 xl:max-w-1/3"
                 alt="A dog relaxing"
                 src="https://source.unsplash.com/random/1000x671"
               />
               <img
-                className="sm:max-w-1/2 xl:max-w-1/3 w-full h-auto"
+                className="w-full h-auto sm:max-w-1/2 xl:max-w-1/3"
                 alt="A dog relaxing"
                 src="https://source.unsplash.com/random/1000x671"
               />
               <img
-                className="sm:max-w-1/2 xl:max-w-1/3 w-full h-auto"
+                className="w-full h-auto sm:max-w-1/2 xl:max-w-1/3"
                 alt="A dog relaxing"
                 src="https://source.unsplash.com/random/1000x671"
               />
               <img
-                className="sm:max-w-1/2 xl:max-w-1/3 w-full h-auto"
+                className="w-full h-auto sm:max-w-1/2 xl:max-w-1/3"
                 alt="A dog relaxing"
                 src="https://source.unsplash.com/random/1000x671"
               />
               <img
-                className="sm:max-w-1/2 xl:max-w-1/3 w-full h-auto"
+                className="w-full h-auto sm:max-w-1/2 xl:max-w-1/3"
                 alt="A dog relaxing"
                 src="https://source.unsplash.com/random/1000x671"
               />
             </div>
-            <div className="mx-auto py-10">
-              <button className="px-10 py-3 tracking-wider uppercase font-semibold text-sm text-white bg-orange">
+            <div className="py-10 mx-auto">
+              <button className="px-10 py-3 text-sm font-semibold tracking-wider text-white uppercase bg-orange">
                 View More
               </button>
             </div>

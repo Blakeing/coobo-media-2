@@ -5,26 +5,26 @@ const BottomNav = () => {
   return (
     <div
       style={{ bottom: '0', right: '0' }}
-      className="z-10 absolute border-t-4 border-l-4 lg:border-l-8 lg:border-t-8 border-white bg-white"
+      className="absolute z-10 bg-white border-t-4 border-l-4 border-white lg:border-l-8 lg:border-t-8"
     >
       <Link to="/web">
-        <button className="bg-web hover:bg-gray-900 font-semibold text-sm lg:text-3xl tracking-wider text-white py-2 px-3 lg:px-4 ">
+        <button className="px-3 py-2 text-sm font-semibold tracking-wider text-white bg-web hover:bg-gray-900 focus:outline-none lg:text-3xl lg:px-4 ">
           Web
         </button>
       </Link>
       <Link to="/print">
-        <button className="bg-print ml-1 lg:ml-2 hover:bg-gray-900 font-semibold text-sm lg:text-3xl tracking-wider text-white py-2 px-3 lg:px-4 ">
+        <button className="px-3 py-2 ml-1 text-sm font-semibold tracking-wider text-white bg-print lg:ml-2 hover:bg-gray-900 focus:outline-none lg:text-3xl lg:px-4 ">
           Print
         </button>
       </Link>
       <Link to="/brand">
-        <button className="bg-brand ml-1 lg:ml-2 hover:bg-gray-900 font-semibold text-sm lg:text-3xl tracking-wider text-white py-2 px-3 lg:px-4 ">
+        <button className="px-3 py-2 ml-1 text-sm font-semibold tracking-wider text-white bg-brand lg:ml-2 hover:bg-gray-900 focus:outline-none lg:text-3xl lg:px-4 ">
           Brand
         </button>
       </Link>
 
       <Link to="/marketing">
-        <button className="bg-marketing ml-1 lg:ml-2 hover:bg-gray-900 font-semibold text-sm lg:text-3xl tracking-wider text-white py-2 px-3 lg:px-4 ">
+        <button className="px-3 py-2 ml-1 text-sm font-semibold tracking-wider text-white bg-marketing lg:ml-2 hover:bg-gray-900 focus:outline-none lg:text-3xl lg:px-4 ">
           Marketing
         </button>
       </Link>
