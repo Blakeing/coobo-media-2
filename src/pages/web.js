@@ -1,51 +1,99 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import Dog from '../images/header_bg_web.jpg';
-
+import FsLightbox from 'fslightbox-react';
 import Coobo from '../images/coobo-logo-white.png';
 import SideNav from '../components/side-nav';
 import Footer from '../components/footer';
 
 const images = [
   {
-    url: 'https://source.unsplash.com/random/1000x671',
-    color: 'bg-teal-500',
+    url: require('../images/web_energy-edge.jpg'),
+    color: 'bg-edge',
     alt: 'hi',
     route: '/'
   },
   {
-    url: 'https://source.unsplash.com/random/1000x671',
-    color: 'bg-red-500',
+    url: require('../images/web_hci.jpg'),
+    color: 'bg-hci',
+    alt: 'hi',
+    route: '/'
+  },
+  {
+    url: require('../images/web_gkh.jpg'),
+    color: 'bg-gkh',
     alt: 'work',
     route: '/contact'
   },
   {
-    url: 'https://source.unsplash.com/random/1000x671',
-    color: 'bg-teal-500',
+    url: require('../images/web_holland-parker.jpg'),
+    color: 'bg-holland',
+    alt: 'work',
+    route: '/contact'
+  },
+  {
+    url: require('../images/web_hookie.jpg'),
+    color: 'bg-hookie',
     alt: 'hi',
     route: '/'
   },
   {
-    url: 'https://source.unsplash.com/random/1000x671',
-    color: 'bg-teal-500',
+    url: require('../images/web_julie-rhodes.jpg'),
+    color: 'bg-martinez',
     alt: 'hi',
     route: '/'
   },
   {
-    url: 'https://source.unsplash.com/random/1000x671',
-    color: 'bg-teal-500',
+    url: require('../images/web_jennifer-martinez.jpg'),
+    color: 'bg-martinez',
     alt: 'hi',
     route: '/'
   },
   {
-    url: 'https://source.unsplash.com/random/1000x671',
-    color: 'bg-teal-500',
+    url: require('../images/web_lead-houston.jpg'),
+    color: 'bg-lead',
     alt: 'hi',
     route: '/'
   },
   {
-    url: 'https://source.unsplash.com/random/1000x671',
-    color: 'bg-teal-500',
+    url: require('../images/web_sbl.jpg'),
+    color: 'bg-sbl',
+    alt: 'hi',
+    route: '/'
+  },
+  {
+    url: require('../images/web_trace.jpg'),
+    color: 'bg-trace',
+    alt: 'hi',
+    route: '/'
+  },
+  {
+    url: require('../images/web_rice-online.jpg'),
+    color: 'bg-creed',
+    alt: 'hi',
+    route: '/'
+  },
+  {
+    url: require('../images/web_flash-funding.jpg'),
+    color: 'bg-flash',
+    alt: 'hi',
+    route: '/'
+  },
+  {
+    url: require('../images/web_reynolds-frizzell.jpg'),
+    color: 'bg-frizzell',
+    alt: 'hi',
+    route: '/'
+  },
+  {
+    url: require('../images/web_griesenbeck.jpg'),
+    color: 'bg-griesenbeck',
+    alt: 'hi',
+    route: '/'
+  },
+  {
+    url: require('../images/web_cpc.jpg'),
+    color: 'bg-cpc',
     alt: 'hi',
     route: '/'
   }
@@ -53,6 +101,18 @@ const images = [
 
 const Web = () => {
   const [isNavOpen, setNavOpen] = useState(false);
+
+  const [lightboxController, setLightboxController] = useState({
+    toggler: false,
+    slide: 1
+  });
+
+  function openLightboxOnSlide(number) {
+    setLightboxController({
+      toggler: !lightboxController.toggler,
+      slide: number
+    });
+  }
   return (
     <>
       <div
@@ -208,45 +268,63 @@ const Web = () => {
                 <div
                   key={index}
                   className="relative w-full h-auto sm:max-w-1/2 xl:max-w-1/3"
+                  onClick={() => openLightboxOnSlide(index + 1)}
                 >
                   <img
                     className="block w-full h-auto"
                     alt={image.alt}
                     src={image.url}
                   />
-                  <Link to={image.route}>
+
+                  <div
+                    className={`${image.color} cursor-pointer absolute hover:opacity-75 inset-0 h-full -w-full opacity-0`}
+                  >
                     <div
                       style={{
-                        transition: '.5 ease'
+                        top: '50%',
+                        left: '50%',
+                        transform: 'translate(-50%, -50%)'
                       }}
-                      className={`${image.color}  absolute hover:opacity-75 inset-0 h-full -w-full opacity-0`}
+                      className="absolute text-center text-white"
                     >
-                      <div
-                        style={{
-                          top: '50%',
-                          left: '50%',
-                          transform: 'translate(-50%, -50%)'
-                        }}
-                        className="absolute text-center text-white"
+                      <svg
+                        aria-hidden="true"
+                        data-prefix="fas"
+                        data-icon="plus-circle"
+                        className="w-10 h-10 fill-current"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
                       >
-                        <svg
-                          aria-hidden="true"
-                          data-prefix="fas"
-                          data-icon="plus-circle"
-                          className="w-10 h-10 fill-current"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 512 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"
-                          />
-                        </svg>
-                      </div>
+                        <path
+                          fill="currentColor"
+                          d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"
+                        />
+                      </svg>
                     </div>
-                  </Link>
+                  </div>
                 </div>
               ))}
+              <FsLightbox
+                toggler={lightboxController.toggler}
+                sources={[
+                  require('../images/web_energy-edge.jpg'),
+                  require('../images/web_hci.jpg'),
+                  require('../images/web_gkh.jpg'),
+                  require('../images/web_holland-parker.jpg'),
+                  require('../images/web_hookie.jpg'),
+                  require('../images/web_julie-rhodes.jpg'),
+                  require('../images/web_jennifer-martinez.jpg'),
+                  require('../images/web_lead-houston.jpg'),
+                  require('../images/web_sbl.jpg'),
+                  require('../images/web_trace.jpg'),
+                  require('../images/web_rice-online.jpg'),
+                  require('../images/web_flash-funding.jpg'),
+                  require('../images/web_reynolds-frizzell.jpg'),
+                  require('../images/web_griesenbeck.jpg'),
+                  require('../images/web_cpc.jpg')
+                ]}
+                slide={lightboxController.slide}
+              />
             </div>
 
             <div className="py-10 mx-auto">
