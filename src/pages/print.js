@@ -1,13 +1,112 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import Printer from '../images/header_bg_print.jpg';
-import Edge from '../images/web_energy-edge.jpg';
 import Coobo from '../images/coobo-logo-white.png';
 import SideNav from '../components/side-nav';
 import Footer from '../components/footer';
+import FsLightbox from 'fslightbox-react';
+
+const images = [
+  {
+    url: require('../images/print_houston-haze.jpg'),
+    color: 'bg-edge',
+    alt: 'hi',
+    route: '/'
+  },
+  {
+    url: require('../images/print_first-tire-poster.jpg'),
+    color: 'bg-hci',
+    alt: 'hi',
+    route: '/'
+  },
+  {
+    url: require('../images/print_spring_park_bizcard.jpg'),
+    color: 'bg-gkh',
+    alt: 'work',
+    route: '/contact'
+  },
+  {
+    url: require('../images/print_opportune_clay-court2.jpg'),
+    color: 'bg-holland',
+    alt: 'work',
+    route: '/contact'
+  },
+  {
+    url: require('../images/print_uh_law_3dlex.jpg'),
+    color: 'bg-hookie',
+    alt: 'hi',
+    route: '/'
+  },
+  {
+    url: require('../images/print_sandbox_bizcard.jpg'),
+    color: 'bg-martinez',
+    alt: 'hi',
+    route: '/'
+  },
+  {
+    url: require('../images/print_purl_loop_bizcard.jpg'),
+    color: 'bg-martinez',
+    alt: 'hi',
+    route: '/'
+  },
+  {
+    url: require('../images/print_prepair_respond_booth_a.jpg'),
+    color: 'bg-lead',
+    alt: 'hi',
+    route: '/'
+  },
+  {
+    url: require('../images/print_paisley_house_bizcard.jpg'),
+    color: 'bg-sbl',
+    alt: 'hi',
+    route: '/'
+  },
+  {
+    url: require('../images/print_reynolds_frizzell_bizcard.jpg'),
+    color: 'bg-trace',
+    alt: 'hi',
+    route: '/'
+  },
+  {
+    url: require('../images/print_eenr_brochure.jpg'),
+    color: 'bg-creed',
+    alt: 'hi',
+    route: '/'
+  },
+  {
+    url: require('../images/print_alitek_bizcard.jpg'),
+    color: 'bg-flash',
+    alt: 'hi',
+    route: '/'
+  },
+  {
+    url: require('../images/print_ttl_brochure.jpg'),
+    color: 'bg-frizzell',
+    alt: 'hi',
+    route: '/'
+  },
+  {
+    url: require('../images/print_raus_choir_ad.jpg'),
+    color: 'bg-griesenbeck',
+    alt: 'hi',
+    route: '/'
+  }
+];
 
 const Print = () => {
   const [isNavOpen, setNavOpen] = useState(false);
+
+  const [lightboxController, setLightboxController] = useState({
+    toggler: false,
+    slide: 1
+  });
+
+  function openLightboxOnSlide(number) {
+    setLightboxController({
+      toggler: !lightboxController.toggler,
+      slide: number
+    });
+  }
   return (
     <>
       <div
@@ -157,83 +256,68 @@ const Print = () => {
             Contact Us
           </button>
         </div>
-        <div className="bg-gray-800 md:w-1/2">
+        <div style={{ backgroundColor: '#2e2e2e' }} className=" md:w-1/2">
           <div className="flex flex-col justify-between ">
             <div className="flex flex-wrap">
-              <img
-                className="w-full h-auto sm:max-w-1/2 xl:max-w-1/3"
-                alt="A dog relaxing"
-                src={Edge}
-              />
-              <img
-                className="w-full h-auto sm:max-w-1/2 xl:max-w-1/3"
-                alt="A dog relaxing"
-                src="https://source.unsplash.com/random/1000x671"
-              />
-              <img
-                className="w-full h-auto sm:max-w-1/2 xl:max-w-1/3"
-                alt="A dog relaxing"
-                src="https://source.unsplash.com/random/1000x671"
-              />
-              <img
-                className="w-full h-auto sm:max-w-1/2 xl:max-w-1/3"
-                alt="A dog relaxing"
-                src="https://source.unsplash.com/random/1000x671"
-              />
-              <img
-                className="w-full h-auto sm:max-w-1/2 xl:max-w-1/3"
-                alt="A dog relaxing"
-                src="https://source.unsplash.com/random/1000x671"
-              />
-              <img
-                className="w-full h-auto sm:max-w-1/2 xl:max-w-1/3"
-                alt="A dog relaxing"
-                src="https://source.unsplash.com/random/1000x671"
-              />
-              <img
-                className="w-full h-auto sm:max-w-1/2 xl:max-w-1/3"
-                alt="A dog relaxing"
-                src="https://source.unsplash.com/random/1000x671"
-              />
-              <img
-                className="w-full h-auto sm:max-w-1/2 xl:max-w-1/3"
-                alt="A dog relaxing"
-                src="https://source.unsplash.com/random/1000x671"
-              />
-              <img
-                className="w-full h-auto sm:max-w-1/2 xl:max-w-1/3"
-                alt="A dog relaxing"
-                src="https://source.unsplash.com/random/1000x671"
-              />
-              <img
-                className="w-full h-auto sm:max-w-1/2 xl:max-w-1/3"
-                alt="A dog relaxing"
-                src="https://source.unsplash.com/random/1000x671"
-              />
-              <img
-                className="w-full h-auto sm:max-w-1/2 xl:max-w-1/3"
-                alt="A dog relaxing"
-                src="https://source.unsplash.com/random/1000x671"
-              />
-              <img
-                className="w-full h-auto sm:max-w-1/2 xl:max-w-1/3"
-                alt="A dog relaxing"
-                src="https://source.unsplash.com/random/1000x671"
-              />
-              <img
-                className="w-full h-auto sm:max-w-1/2 xl:max-w-1/3"
-                alt="A dog relaxing"
-                src="https://source.unsplash.com/random/1000x671"
-              />
-              <img
-                className="w-full h-auto sm:max-w-1/2 xl:max-w-1/3"
-                alt="A dog relaxing"
-                src="https://source.unsplash.com/random/1000x671"
-              />
-              <img
-                className="w-full h-auto sm:max-w-1/2 xl:max-w-1/3"
-                alt="A dog relaxing"
-                src="https://source.unsplash.com/random/1000x671"
+              {images.map((image, index) => (
+                <div
+                  key={index}
+                  className="relative w-full h-auto sm:max-w-1/2 xl:max-w-1/3"
+                  onClick={() => openLightboxOnSlide(index + 1)}
+                >
+                  <img
+                    className="block w-full h-auto"
+                    alt={image.alt}
+                    src={image.url}
+                  />
+
+                  <div
+                    className={`${image.color} cursor-pointer absolute hover:opacity-75 inset-0 h-full -w-full opacity-0`}
+                  >
+                    <div
+                      style={{
+                        top: '50%',
+                        left: '50%',
+                        transform: 'translate(-50%, -50%)'
+                      }}
+                      className="absolute text-center text-white"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        data-prefix="fas"
+                        data-icon="plus-circle"
+                        className="w-10 h-10 fill-current"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              ))}
+              <FsLightbox
+                toggler={lightboxController.toggler}
+                sources={[
+                  require('../images/print_houston-haze.jpg'),
+                  require('../images/print_first-tire-poster.jpg'),
+                  require('../images/print_spring_park_bizcard.jpg'),
+                  require('../images/print_opportune_clay-court2.jpg'),
+                  require('../images/print_uh_law_3dlex.jpg'),
+                  require('../images/print_sandbox_bizcard.jpg'),
+                  require('../images/print_purl_loop_bizcard.jpg'),
+                  require('../images/print_prepair_respond_booth_a.jpg'),
+                  require('../images/print_paisley_house_bizcard.jpg'),
+                  require('../images/print_reynolds_frizzell_bizcard.jpg'),
+                  require('../images/print_eenr_brochure.jpg'),
+                  require('../images/print_alitek_bizcard.jpg'),
+                  require('../images/print_ttl_brochure.jpg'),
+                  require('../images/print_raus_choir_ad.jpg')
+                ]}
+                slide={lightboxController.slide}
               />
             </div>
             <div className="py-10 mx-auto">

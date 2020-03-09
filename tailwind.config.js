@@ -9,7 +9,21 @@ module.exports = {
         web: 'rgb(181,47,47)',
         print: 'rgb(67,135,75)',
         steel: 'rgba(0, 0, 0, 0.08)',
-        'dark-steel': 'rgba(167, 167, 167, 0.75)'
+        'dark-steel': 'rgba(167, 167, 167, 0.75)',
+        edge: 'rgb(7, 81, 67)',
+        hci: 'rgb(35, 146, 199)',
+        gkh: 'rgb(31, 44, 70)',
+        holland: 'rgb(31, 44, 70)',
+        hookie: 'rgb(28, 69, 148)',
+        martinez: 'rgb(50, 50, 50)',
+        lead: 'rgb(51, 158, 164)',
+        sbl: 'rgb(61, 113, 184)',
+        trace: 'rgb(77, 149, 161)',
+        creed: 'rgb(95, 129, 64)',
+        flash: 'rgb(8, 75, 142)',
+        frizzell: 'rgb(223, 110, 49)',
+        griesenbeck: 'rgb(143, 37, 35)',
+        cpc: 'rgb(32, 119, 180)'
       }
     },
     maxWidth: {
