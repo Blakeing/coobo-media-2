@@ -2,6 +2,13 @@ import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import Mark from '../images/header_bg_mark.jpg';
 import Harrison from '../images/staff_abt_blake_harrison.jpg';
+import Ingenthron from '../images/staff_abt_blake_ingenthron.jpg';
+import Phillips from '../images/staff_abt_lisa_phillips.jpg';
+import Brewer from '../images/staff_abt_brian_brewer.jpg';
+import Chu from '../images/staff_abt_victoria_chu.jpg';
+import Fox from '../images/staff_abt_justin_fox.jpg';
+import Johnson from '../images/staff_abt_lisa_johnson.jpg';
+import Sullivan from '../images/staff_abt_quinn_sullivan.jpg';
 import Coobo from '../images/coobo-logo-white.png';
 import SideNav from '../components/side-nav';
 import Footer from '../components/footer';
@@ -207,7 +214,7 @@ const About = () => {
               >
                 Blake Harrison
               </span>
-              <Link to="/blake">
+              <Link to="/staff/blake-harrison">
                 <div
                   style={{ bottom: '10%', left: '10%' }}
                   className="absolute"
@@ -235,7 +242,7 @@ const About = () => {
             </div>
             <div
               style={{
-                backgroundImage: `url(${Harrison})`,
+                backgroundImage: `url(${Phillips})`,
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
@@ -249,9 +256,273 @@ const About = () => {
                 style={{ top: '10%', left: '10%' }}
                 className="absolute p-2 text-lg font-semibold tracking-wide text-white"
               >
-                Blake Harrison
+                Lisa Phillips
               </span>
-              <Link to="/blake">
+              <Link to="/staff/lisa-phillips">
+                <div
+                  style={{ bottom: '10%', left: '10%' }}
+                  className="absolute"
+                >
+                  <div className="inline-block p-2 text-sm font-semibold tracking-wider text-white uppercase ">
+                    View Bio
+                    <span>
+                      <svg
+                        aria-hidden="true"
+                        data-prefix="far"
+                        data-icon="arrow-alt-circle-right"
+                        className="inline-block w-10 h-10 pb-1 pl-3"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            <div
+              style={{
+                backgroundImage: `url(${Brewer})`,
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                height: '400px',
+                boxShadow: '0 3000px rgba(51, 51, 51, 0.3) inset'
+              }}
+              className="relative w-full hover:opacity-75 md:w-1/2 "
+              alt="A dog relaxing"
+            >
+              <span
+                style={{ top: '10%', left: '10%' }}
+                className="absolute p-2 text-lg font-semibold tracking-wide text-white"
+              >
+                Brian Brewer
+              </span>
+              <Link to="/staff/brian-brewer">
+                <div
+                  style={{ bottom: '10%', left: '10%' }}
+                  className="absolute"
+                >
+                  <div className="inline-block p-2 text-sm font-semibold tracking-wider text-white uppercase ">
+                    View Bio
+                    <span>
+                      <svg
+                        aria-hidden="true"
+                        data-prefix="far"
+                        data-icon="arrow-alt-circle-right"
+                        className="inline-block w-10 h-10 pb-1 pl-3"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            <div
+              style={{
+                backgroundImage: `url(${Chu})`,
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                height: '400px',
+                boxShadow: '0 3000px rgba(51, 51, 51, 0.3) inset'
+              }}
+              className="relative w-full hover:opacity-75 md:w-1/2 "
+              alt="A dog relaxing"
+            >
+              <span
+                style={{ top: '10%', left: '10%' }}
+                className="absolute p-2 text-lg font-semibold tracking-wide text-white"
+              >
+                Victoria Chu
+              </span>
+              <Link to="/staff/victoria-chu">
+                <div
+                  style={{ bottom: '10%', left: '10%' }}
+                  className="absolute"
+                >
+                  <div className="inline-block p-2 text-sm font-semibold tracking-wider text-white uppercase ">
+                    View Bio
+                    <span>
+                      <svg
+                        aria-hidden="true"
+                        data-prefix="far"
+                        data-icon="arrow-alt-circle-right"
+                        className="inline-block w-10 h-10 pb-1 pl-3"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            <div
+              style={{
+                backgroundImage: `url(${Fox})`,
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                height: '400px',
+                boxShadow: '0 3000px rgba(51, 51, 51, 0.3) inset'
+              }}
+              className="relative w-full hover:opacity-75 md:w-1/2 "
+              alt="A dog relaxing"
+            >
+              <span
+                style={{ top: '10%', left: '10%' }}
+                className="absolute p-2 text-lg font-semibold tracking-wide text-white"
+              >
+                Justin Fox
+              </span>
+              <Link to="/staff/justin-fox">
+                <div
+                  style={{ bottom: '10%', left: '10%' }}
+                  className="absolute"
+                >
+                  <div className="inline-block p-2 text-sm font-semibold tracking-wider text-white uppercase ">
+                    View Bio
+                    <span>
+                      <svg
+                        aria-hidden="true"
+                        data-prefix="far"
+                        data-icon="arrow-alt-circle-right"
+                        className="inline-block w-10 h-10 pb-1 pl-3"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            <div
+              style={{
+                backgroundImage: `url(${Ingenthron})`,
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                height: '400px',
+                boxShadow: '0 3000px rgba(51, 51, 51, 0.3) inset'
+              }}
+              className="relative w-full hover:opacity-75 md:w-1/2 "
+              alt="A dog relaxing"
+            >
+              <span
+                style={{ top: '10%', left: '10%' }}
+                className="absolute p-2 text-lg font-semibold tracking-wide text-white"
+              >
+                Blake Ingenthron
+              </span>
+              <Link to="/">
+                <div
+                  style={{ bottom: '10%', left: '10%' }}
+                  className="absolute"
+                >
+                  <div className="inline-block p-2 text-sm font-semibold tracking-wider text-white uppercase ">
+                    View Bio
+                    <span>
+                      <svg
+                        aria-hidden="true"
+                        data-prefix="far"
+                        data-icon="arrow-alt-circle-right"
+                        className="inline-block w-10 h-10 pb-1 pl-3"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            <div
+              style={{
+                backgroundImage: `url(${Johnson})`,
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                height: '400px',
+                boxShadow: '0 3000px rgba(51, 51, 51, 0.3) inset'
+              }}
+              className="relative w-full hover:opacity-75 md:w-1/2 "
+              alt="A dog relaxing"
+            >
+              <span
+                style={{ top: '10%', left: '10%' }}
+                className="absolute p-2 text-lg font-semibold tracking-wide text-white"
+              >
+                Lisa Johnson
+              </span>
+              <Link to="/">
+                <div
+                  style={{ bottom: '10%', left: '10%' }}
+                  className="absolute"
+                >
+                  <div className="inline-block p-2 text-sm font-semibold tracking-wider text-white uppercase ">
+                    View Bio
+                    <span>
+                      <svg
+                        aria-hidden="true"
+                        data-prefix="far"
+                        data-icon="arrow-alt-circle-right"
+                        className="inline-block w-10 h-10 pb-1 pl-3"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            <div
+              style={{
+                backgroundImage: `url(${Sullivan})`,
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                height: '400px',
+                boxShadow: '0 3000px rgba(51, 51, 51, 0.3) inset'
+              }}
+              className="relative w-full hover:opacity-75 md:w-1/2 "
+              alt="A dog relaxing"
+            >
+              <span
+                style={{ top: '10%', left: '10%' }}
+                className="absolute p-2 text-lg font-semibold tracking-wide text-white"
+              >
+                Quinn Sullivan
+              </span>
+              <Link to="/">
                 <div
                   style={{ bottom: '10%', left: '10%' }}
                   className="absolute"

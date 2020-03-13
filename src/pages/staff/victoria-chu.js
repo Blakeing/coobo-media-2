@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import Harrison from '../images/staff_blake_harrison.jpg';
+import Chu from '../../images/staff_victoria_chu.jpg';
 import Div100vh from 'react-div-100vh';
 import { useMediaQuery } from 'react-responsive';
-import SideNav from '../components/side-nav';
+import SideNav from '../../components/side-nav';
 import { Link } from 'gatsby';
-import Footer from '../components/footer';
+import Footer from '../../components/footer';
 
-const Blake = () => {
+const VictoriaChu = () => {
   const isDesktopOrLaptop = useMediaQuery({
     query: '(min-device-width: 1224px)'
   });
@@ -34,7 +34,7 @@ const Blake = () => {
         <SideNav isOpen={isNavOpen} />
         <Div100vh
           style={{
-            backgroundImage: `url(${Harrison})`,
+            backgroundImage: `url(${Chu})`,
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
@@ -43,42 +43,29 @@ const Blake = () => {
           className="w-full md:w-1/4"
         />
         <div
-          style={{ backgroundColor: '#41b2bf' }}
+          style={{ backgroundColor: '#C94646' }}
           className="flex flex-col items-center justify-center md:w-3/4"
         >
           <div className="w-full px-5 py-6 lg:p-10 ">
             <h1 className="mb-2 text-4xl font-bold leading-none text-white lg:text-6xl">
-              Blake Harrison
+              Victoria Chu
             </h1>
             <h2 className="text-lg font-bold tracking-wide text-white">
-              Creative Director / Managing Partner
+              Web Designer / Developer
             </h2>
           </div>
-          <div style={{ backgroundColor: '#3795A0' }} className="p-5 lg:p-10">
+          <div style={{ backgroundColor: '#A43A3A' }} className="p-5 lg:p-10">
             <p className="mb-6 font-light text-white">
-              Coobo Media is not only named after Blake‘s twin boys, Cooper and
-              Bo, but it is also the realization of his dream to create a
-              business where he gets to interact with all types of people from
-              different industries. Blake’s expertise lies in helping clients
-              understand and communicate their unique business “stories,”
-              creating distinctive designs and utilizing technology to
-              differentiate each business from their competition.
-            </p>
-            <p className="mb-6 font-light text-white">
-              After three years in Real Estate Banking right out of college,
-              Blake changed gears and spent ten years in the entertainment
-              industry in Los Angeles, working on the writing staff of
-              television shows such as “The Nanny,” “Grace Under Fire,” and “Mad
-              About You.” His entree into Web Development started in the 90’s
-              after raising funds and launching an online portal, featuring
-              serialized comedy sketches. He and his wife missed Texas and moved
-              back in 2002. He then spent six years heading up the marketing
-              department for a manufacturer/distributor, who remains a client
-              today.
-            </p>
-            <p className="font-light text-white">
-              A graduate of Texas AM University, Blake is married to TK and has
-              three kids.
+              Victoria joined Coobo in 2015, bringing with her considerable web
+              design talents. Originally from Taiwan, she attended school in the
+              states and graduated from the University of Houston with a
+              Bachelor of Arts in Art Education. After graduation, Victoria
+              spent 1½ years working with middle school computer and art
+              students at the Harmony School of Science. But the self-proclaimed
+              geek found her true passion during an internship at a web design
+              startup. Victoria, who also answers to, Vickie, was a bit of
+              tomboy as a child and now she channels her athletic tendencies
+              into outdoor activities and cheering for our Houston Astros.
             </p>
           </div>
           <div className="flex items-center justify-center py-10 ">
@@ -95,4 +82,4 @@ const Blake = () => {
   );
 };
 
-export default Blake;
+export default VictoriaChu;

@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div
       style={{ backgroundColor: '#252525' }}
-      className="relative h-24 border-b-8 border-white"
+      className="relative h-20 border-b-8 border-white"
     >
       <div
         style={{ right: '8rem', bottom: '-8px' }}
@@ -18,7 +18,7 @@ const Footer = () => {
             aria-hidden="true"
             data-prefix="fab"
             data-icon="facebook-f"
-            className="w-3 w-6 h-3 h-6 text-white fill-current"
+            className="w-4 h-4 text-white fill-current"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 320 512"
           >
@@ -41,7 +41,7 @@ const Footer = () => {
             aria-hidden="true"
             data-prefix="fab"
             data-icon="linkedin-in"
-            className="w-3 w-6 h-3 h-6 text-white fill-current"
+            className="w-4 h-4 text-white fill-current"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512"
           >

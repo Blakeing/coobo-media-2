@@ -24,6 +24,14 @@ module.exports = {
         frizzell: 'rgb(223, 110, 49)',
         griesenbeck: 'rgb(143, 37, 35)',
         cpc: 'rgb(32, 119, 180)'
+      },
+      height: {
+        '300': '18.75rem',
+        '184': '11.5rem'
+      },
+      backgroundPosition: {
+        slider: 'left 5rem bottom -1rem',
+        none: ''
       }
     },
     maxWidth: {

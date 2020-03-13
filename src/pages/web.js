@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
-import { Link } from 'gatsby';
-import Dog from '../images/header_bg_web.jpg';
 import FsLightbox from 'fslightbox-react';
-import Coobo from '../images/coobo-logo-white.png';
-import SideNav from '../components/side-nav';
+import { Link } from 'gatsby';
+import React, { useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import Footer from '../components/footer';
+import SideNav from '../components/side-nav';
+import Coobo from '../images/coobo-logo-white.png';
+import CooboColor from '../images/coobomedia_logo_color.png';
+import Dog from '../images/header_bg_web.jpg';
 
 const images = [
   {
@@ -113,15 +115,43 @@ const Web = () => {
       slide: number
     });
   }
+
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(min-device-width: 1224px)'
+  });
+
   return (
     <>
+      <header
+        style={{ marginBottom: '.25rem' }}
+        className="fixed z-40 w-full bg-white shadow lg:hidden"
+      >
+        <div className="flex flex-wrap items-center justify-between p-4 mx-auto ">
+          <Link className="flex items-center text-white no-underline" to="/">
+            <img className="h-6" src={CooboColor} />
+          </Link>
+          <button
+            className="z-40 flex items-center block px-1 py-1 text-white rounded focus:outline-none lg:hidden"
+            onClick={() => setNavOpen(!isNavOpen)}
+          >
+            <svg
+              className="w-6 h-6 text-gray-500 fill-current"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+          </button>
+        </div>
+      </header>
       <div
-        className="relative flex h-32 bg-center bg-cover border-t-8 border-white md:h-48 xl:h-64"
+        className="relative flex bg-no-repeat border-t-8 border-white h-184 sm:h-300 "
         style={{
           backgroundImage: `url(${Dog})`,
-          height: '300px',
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
+          backgroundSize: isDesktopOrLaptop ? 'cover' : 'auto 80%',
+          backgroundPosition: isDesktopOrLaptop ? '' : 'left 3rem bottom -1rem',
+          backgroundColor: '#7F7F7F',
           boxShadow: '0 3000px rgba(51, 51, 51, 0.3) inset'
         }}
       >
@@ -149,6 +179,7 @@ const Web = () => {
           </button>
         </div>
         <SideNav isOpen={isNavOpen} />
+
         <div style={{ bottom: '25%', left: '5%' }} className="absolute">
           <h2 className="pl-5 text-3xl font-bold text-white lg:pl-16 md:text-5xl">
             Web
@@ -197,22 +228,37 @@ const Web = () => {
           </li>
         </ul>
       </div>
-      <nav className="flex bg-gray-900 lg:hidden ">
-        <Link className="py-3 pl-5 pr-6 text-sm text-white " to="/">
+      <div style={{ backgroundColor: '#2B2B2B' }} className="flex lg:hidden ">
+        <Link
+          className="py-3 pl-5 pr-6 text-sm font-light tracking-wide text-white "
+          to="/web"
+        >
           Web
         </Link>
-        <Link className="py-3 pr-6 text-sm text-white" to="/">
+        <Link
+          className="py-3 pr-6 text-sm font-light tracking-wide text-white"
+          to="/print"
+        >
           Print
         </Link>
-        <Link className="py-3 pr-6 text-sm text-white" to="/">
+        <Link
+          className="py-3 pr-6 text-sm font-light tracking-wide text-white"
+          to="/brand"
+        >
           Brand
         </Link>
-        <Link className="py-3 text-sm text-white " to="/">
+        <Link
+          className="py-3 text-sm font-light tracking-wide text-white "
+          to="/marketing"
+        >
           Marketing
         </Link>
-      </nav>
+      </div>
       <div className="flex flex-wrap">
-        <div className="p-5 bg-gray-100 md:w-1/2 lg:p-16">
+        <div
+          style={{ backgroundColor: '#F7F7F7' }}
+          className="p-5 md:w-1/2 lg:p-16"
+        >
           <h2 className="pb-6 text-3xl font-bold leading-tight text-gray-900">
             The Perfect Sales Pitch, Every Time
           </h2>
@@ -234,7 +280,7 @@ const Web = () => {
             <br />
             -Blake Harrison
           </p>
-          <ul className="pb-5">
+          <ul className="pb-6">
             <li className="p-2 mb-2 text-gray-900 border-l-4 border-orange bg-steel">
               Responsive Website Design
             </li>

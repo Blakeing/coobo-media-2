@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Tailwind`,
+    title: `Coobo Media`,
     description: `Gatsby starter styled with Tailwind`,
-    author: `@taylorbryant`
+    author: `Blake Ingenthron`
   },
   plugins: [
-    "gatsby-plugin-eslint",
+    'gatsby-plugin-eslint',
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -20,7 +20,7 @@ module.exports = {
       }
     },
     {
-      resolve: "gatsby-plugin-postcss",
+      resolve: 'gatsby-plugin-postcss',
       options: {
         postCssPlugins: [
           require(`tailwindcss`)(`./tailwind.config.js`),

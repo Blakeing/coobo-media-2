@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { useTransition, animated, config } from 'react-spring';
-import Home from './slides/home-slide';
-import Web from './slides/web-slide';
-import Print from './slides/print-slide';
-import Brand from './slides/brand-slide';
-import Marketing from './slides/marketing-slide';
 import { Link } from 'gatsby';
+import React, { useEffect, useState } from 'react';
+import { animated, config, useTransition } from 'react-spring';
 import Coobo from '../../images/coobo-logo-white.png';
+import Brand from './slides/brand-slide';
+import Home from './slides/home-slide';
+import Marketing from './slides/marketing-slide';
+import Print from './slides/print-slide';
+import Web from './slides/web-slide';
 
 const slides = [
   {
@@ -46,7 +46,7 @@ const Slider = () => {
   return transitions.map(({ item, props, key }) => (
     <animated.div
       key={key}
-      className="z-0 overflow-hidden h-full w-full inset-y-0  bg-center absolute"
+      className="absolute inset-y-0 z-0 w-full h-full overflow-hidden bg-center"
       style={{
         ...props,
         willChange: 'opacity'
@@ -55,7 +55,7 @@ const Slider = () => {
       <Link to="/">
         <img
           style={{ top: '2rem', left: '2rem' }}
-          className="hidden lg:block absolute top-0 left-0 bg-transparent "
+          className="absolute top-0 left-0 hidden bg-transparent lg:block "
           src={Coobo}
         />
       </Link>
