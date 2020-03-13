@@ -200,7 +200,10 @@ const Marketing = () => {
         </Link>
       </div>
       <div className="flex flex-wrap ">
-        <div className="p-5 bg-gray-100 md:w-1/2 lg:p-16">
+        <div
+          style={{ backgroundColor: '#F7F7F7' }}
+          className="p-5  md:w-1/2 lg:p-16"
+        >
           <h2 className="pb-6 text-3xl font-bold leading-tight text-gray-900">
             It starts with a plan...
           </h2>

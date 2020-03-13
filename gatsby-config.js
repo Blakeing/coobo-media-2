@@ -14,7 +14,7 @@ module.exports = {
         short_name: `starter`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#4dc0b5`,
+        theme_color: `rgb(37, 37, 37)`,
         display: `minimal-ui`,
         icon: `src/images/tailwind-icon.png`
       }
