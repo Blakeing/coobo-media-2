@@ -10,38 +10,92 @@ import Mark from '../images/header_bg_mark.jpg';
 
 const images = [
   {
-    url: require('../images/mark-alitek_thumb.jpg'),
+    url: require('../images/web_energy-edge.jpg'),
     color: 'bg-edge',
     alt: 'hi',
     route: '/'
   },
   {
-    url: require('../images/mark-iarch_thumb.jpg'),
+    url: require('../images/web_hci.jpg'),
     color: 'bg-hci',
     alt: 'hi',
     route: '/'
   },
   {
-    url: require('../images/first-tire.jpg'),
+    url: require('../images/web_gkh.jpg'),
     color: 'bg-gkh',
     alt: 'work',
     route: '/contact'
   },
   {
-    url: require('../images/mark-auc_thumb.jpg'),
+    url: require('../images/web_holland-parker.jpg'),
     color: 'bg-holland',
     alt: 'work',
     route: '/contact'
   },
   {
-    url: require('../images/mark-marks-clothiers_thumb.jpg'),
+    url: require('../images/web_hookie.jpg'),
     color: 'bg-hookie',
     alt: 'hi',
     route: '/'
   },
   {
-    url: require('../images/mark-cert-crane-rig-thumb.jpg'),
+    url: require('../images/web_julie-rhodes.jpg'),
     color: 'bg-martinez',
+    alt: 'hi',
+    route: '/'
+  },
+  {
+    url: require('../images/web_jennifer-martinez.jpg'),
+    color: 'bg-martinez',
+    alt: 'hi',
+    route: '/'
+  },
+  {
+    url: require('../images/web_lead-houston.jpg'),
+    color: 'bg-lead',
+    alt: 'hi',
+    route: '/'
+  },
+  {
+    url: require('../images/web_sbl.jpg'),
+    color: 'bg-sbl',
+    alt: 'hi',
+    route: '/'
+  },
+  {
+    url: require('../images/web_trace.jpg'),
+    color: 'bg-trace',
+    alt: 'hi',
+    route: '/'
+  },
+  {
+    url: require('../images/web_rice-online.jpg'),
+    color: 'bg-creed',
+    alt: 'hi',
+    route: '/'
+  },
+  {
+    url: require('../images/web_flash-funding.jpg'),
+    color: 'bg-flash',
+    alt: 'hi',
+    route: '/'
+  },
+  {
+    url: require('../images/web_reynolds-frizzell.jpg'),
+    color: 'bg-frizzell',
+    alt: 'hi',
+    route: '/'
+  },
+  {
+    url: require('../images/web_griesenbeck.jpg'),
+    color: 'bg-griesenbeck',
+    alt: 'hi',
+    route: '/'
+  },
+  {
+    url: require('../images/web_cpc.jpg'),
+    color: 'bg-cpc',
     alt: 'hi',
     route: '/'
   }
@@ -202,7 +256,7 @@ const Marketing = () => {
       <div className="flex flex-wrap ">
         <div
           style={{ backgroundColor: '#F7F7F7' }}
-          className="p-5  md:w-1/2 lg:p-16"
+          className="p-5 md:w-1/2 lg:p-16"
         >
           <h2 className="pb-6 text-3xl font-bold leading-tight text-gray-900">
             It starts with a plan...
