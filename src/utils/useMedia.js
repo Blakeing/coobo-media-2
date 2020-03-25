@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { window } from 'browser-monads';
 
 export default function useMedia(queries, values, defaultValue) {
   const match = () =>
