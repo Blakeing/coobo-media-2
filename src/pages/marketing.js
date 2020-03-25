@@ -10,92 +10,38 @@ import Mark from '../images/header_bg_mark.jpg';
 
 const images = [
   {
-    url: require('../images/web_energy-edge.jpg'),
+    url: require('../images/mark-alitek_thumb.jpg'),
     color: 'bg-edge',
     alt: 'hi',
     route: '/'
   },
   {
-    url: require('../images/web_hci.jpg'),
+    url: require('../images/mark-iarch_thumb.jpg'),
     color: 'bg-hci',
     alt: 'hi',
     route: '/'
   },
   {
-    url: require('../images/web_gkh.jpg'),
+    url: require('../images/first-tire.jpg'),
     color: 'bg-gkh',
     alt: 'work',
     route: '/contact'
   },
   {
-    url: require('../images/web_holland-parker.jpg'),
+    url: require('../images/mark-auc_thumb.jpg'),
     color: 'bg-holland',
     alt: 'work',
     route: '/contact'
   },
   {
-    url: require('../images/web_hookie.jpg'),
+    url: require('../images/mark-marks-clothiers_thumb.jpg'),
     color: 'bg-hookie',
     alt: 'hi',
     route: '/'
   },
   {
-    url: require('../images/web_julie-rhodes.jpg'),
+    url: require('../images/mark-cert-crane-rig-thumb.jpg'),
     color: 'bg-martinez',
-    alt: 'hi',
-    route: '/'
-  },
-  {
-    url: require('../images/web_jennifer-martinez.jpg'),
-    color: 'bg-martinez',
-    alt: 'hi',
-    route: '/'
-  },
-  {
-    url: require('../images/web_lead-houston.jpg'),
-    color: 'bg-lead',
-    alt: 'hi',
-    route: '/'
-  },
-  {
-    url: require('../images/web_sbl.jpg'),
-    color: 'bg-sbl',
-    alt: 'hi',
-    route: '/'
-  },
-  {
-    url: require('../images/web_trace.jpg'),
-    color: 'bg-trace',
-    alt: 'hi',
-    route: '/'
-  },
-  {
-    url: require('../images/web_rice-online.jpg'),
-    color: 'bg-creed',
-    alt: 'hi',
-    route: '/'
-  },
-  {
-    url: require('../images/web_flash-funding.jpg'),
-    color: 'bg-flash',
-    alt: 'hi',
-    route: '/'
-  },
-  {
-    url: require('../images/web_reynolds-frizzell.jpg'),
-    color: 'bg-frizzell',
-    alt: 'hi',
-    route: '/'
-  },
-  {
-    url: require('../images/web_griesenbeck.jpg'),
-    color: 'bg-griesenbeck',
-    alt: 'hi',
-    route: '/'
-  },
-  {
-    url: require('../images/web_cpc.jpg'),
-    color: 'bg-cpc',
     alt: 'hi',
     route: '/'
   }

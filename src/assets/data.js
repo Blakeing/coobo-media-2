@@ -23,12 +23,12 @@ import martinez from '../images/web_jennifer-martinez.jpg';
 import houston from '../images/web_lead-houston.jpg';
 import sbl from '../images/web_sbl.jpg';
 import trace from '../images/web_trace.jpg';
-import alitekt from '../images/mark-alitek_thumb.jpg';
-import iarch from '../images/mark-iarch_thumb.jpg';
-import tire from '../images/first-tire.jpg';
-import auc from '../images/mark-auc_thumb.jpg';
-import marks from '../images/mark-marks-clothiers_thumb.jpg';
-import crane from '../images/mark-cert-crane-rig-thumb.jpg';
+// import alitekt from '../images/mark-alitek_thumb.jpg';
+// import iarch from '../images/mark-iarch_thumb.jpg';
+// import tire from '../images/first-tire.jpg';
+// import auc from '../images/mark-auc_thumb.jpg';
+// import marks from '../images/mark-marks-clothiers_thumb.jpg';
+// import crane from '../images/mark-cert-crane-rig-thumb.jpg';
 
 export default [
   {
@@ -180,41 +180,5 @@ export default [
     name: 'Wild Apple',
     height: 671,
     category: 'web'
-  },
-  {
-    css: `url(${alitekt})`,
-    name: 'Wild Apple',
-    height: 671,
-    category: 'marketing'
-  },
-  {
-    css: `url(${iarch})`,
-    name: 'Wild Apple',
-    height: 671,
-    category: 'marketing'
-  },
-  {
-    css: `url(${tire})`,
-    name: 'Wild Apple',
-    height: 671,
-    category: 'marketing'
-  },
-  {
-    css: `url(${auc})`,
-    name: 'Wild Apple',
-    height: 671,
-    category: 'marketing'
-  },
-  {
-    css: `url(${marks})`,
-    name: 'Wild Apple',
-    height: 671,
-    category: 'marketing'
-  },
-  {
-    css: `url(${crane})`,
-    name: 'Wild Apple',
-    height: 671,
-    category: 'marketing'
   }
 ];
