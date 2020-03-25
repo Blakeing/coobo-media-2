@@ -40,8 +40,7 @@ function App() {
     enter: ({ xy, width, height }) => ({ xy, width, height, opacity: 1 }),
     update: ({ xy, width, height }) => ({ xy, width, height }),
     leave: { opacity: 0 },
-    config: { mass: 5, tension: 500, friction: 100 },
-    trail: 25
+    config: { mass: 5, tension: 500, friction: 100 }
   });
   // Render the grid
   return (
