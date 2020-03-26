@@ -167,7 +167,7 @@ const OurWork = () => {
         </button>
         <button
           className="py-3 pr-6 text-sm font-light tracking-wide text-white focus:outline-none"
-          onClick={() => set(shuffle(data))}
+          onClick={() => set(data)}
         >
           Print
         </button>

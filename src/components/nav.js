@@ -28,7 +28,7 @@ const Nav = ({ style }) => {
           </Link>
           <Link
             className="block text-3xl font-bold tracking-wide text-left text-white hover:text-gray-400"
-            to="/work"
+            to="/our-work"
           >
             Our Work
           </Link>
