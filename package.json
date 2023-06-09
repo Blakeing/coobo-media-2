@@ -7,7 +7,7 @@
     "browser-monads": "^1.0.0",
     "framer-motion": "^1.10.2",
     "fslightbox-react": "^1.4.9",
-    "gatsby": "2.19.16",
+    "gatsby": "4.25.7",
     "gatsby-plugin-manifest": "2.2.41",
     "gatsby-plugin-offline": "3.0.34",
     "gatsby-plugin-postcss": "2.1.20",
